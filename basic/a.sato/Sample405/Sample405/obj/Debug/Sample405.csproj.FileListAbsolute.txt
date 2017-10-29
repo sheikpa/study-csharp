@@ -1,6 +1,0 @@
-D:\study-csharp\Sample405\Sample405\bin\Debug\Sample405.exe.config
-D:\study-csharp\Sample405\Sample405\bin\Debug\Sample405.exe
-D:\study-csharp\Sample405\Sample405\bin\Debug\Sample405.pdb
-D:\study-csharp\Sample405\Sample405\obj\Debug\Sample405.csproj.CoreCompileInputs.cache
-D:\study-csharp\Sample405\Sample405\obj\Debug\Sample405.exe
-D:\study-csharp\Sample405\Sample405\obj\Debug\Sample405.pdb

@@ -1,2 +1,0 @@
-sample302.exe
-pause

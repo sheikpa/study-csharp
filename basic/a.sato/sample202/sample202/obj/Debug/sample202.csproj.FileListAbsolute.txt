@@ -1,6 +1,0 @@
-D:\study-csharp\sample202\sample202\bin\Debug\sample202.exe.config
-D:\study-csharp\sample202\sample202\bin\Debug\sample202.exe
-D:\study-csharp\sample202\sample202\bin\Debug\sample202.pdb
-D:\study-csharp\sample202\sample202\obj\Debug\sample202.csproj.CoreCompileInputs.cache
-D:\study-csharp\sample202\sample202\obj\Debug\sample202.exe
-D:\study-csharp\sample202\sample202\obj\Debug\sample202.pdb

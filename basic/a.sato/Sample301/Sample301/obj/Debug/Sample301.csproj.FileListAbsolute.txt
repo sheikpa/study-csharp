@@ -1,7 +1,0 @@
-D:\study-csharp\Sample301\Sample301\bin\Debug\Sample301.exe.config
-D:\study-csharp\Sample301\Sample301\bin\Debug\Sample301.exe
-D:\study-csharp\Sample301\Sample301\bin\Debug\Sample301.pdb
-D:\study-csharp\Sample301\Sample301\obj\Debug\Sample301.csprojResolveAssemblyReference.cache
-D:\study-csharp\Sample301\Sample301\obj\Debug\Sample301.csproj.CoreCompileInputs.cache
-D:\study-csharp\Sample301\Sample301\obj\Debug\Sample301.exe
-D:\study-csharp\Sample301\Sample301\obj\Debug\Sample301.pdb

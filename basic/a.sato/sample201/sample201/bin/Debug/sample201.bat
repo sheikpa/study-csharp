@@ -1,2 +1,0 @@
-sample201.exe
-pause

@@ -1,6 +1,0 @@
-D:\study-csharp\Sample406\Sample406\bin\Debug\Sample406.exe.config
-D:\study-csharp\Sample406\Sample406\bin\Debug\Sample406.exe
-D:\study-csharp\Sample406\Sample406\bin\Debug\Sample406.pdb
-D:\study-csharp\Sample406\Sample406\obj\Debug\Sample406.csproj.CoreCompileInputs.cache
-D:\study-csharp\Sample406\Sample406\obj\Debug\Sample406.exe
-D:\study-csharp\Sample406\Sample406\obj\Debug\Sample406.pdb

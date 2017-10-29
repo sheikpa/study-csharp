@@ -1,6 +1,0 @@
-D:\study-csharp\Sample403\Sample403\bin\Debug\Sample403.exe.config
-D:\study-csharp\Sample403\Sample403\bin\Debug\Sample403.exe
-D:\study-csharp\Sample403\Sample403\bin\Debug\Sample403.pdb
-D:\study-csharp\Sample403\Sample403\obj\Debug\Sample403.csproj.CoreCompileInputs.cache
-D:\study-csharp\Sample403\Sample403\obj\Debug\Sample403.exe
-D:\study-csharp\Sample403\Sample403\obj\Debug\Sample403.pdb
