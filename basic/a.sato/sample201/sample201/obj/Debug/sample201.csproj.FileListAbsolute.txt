@@ -1,0 +1,7 @@
+D:\study-csharp\sample201\sample201\bin\Debug\sample201.exe.config
+D:\study-csharp\sample201\sample201\bin\Debug\sample201.exe
+D:\study-csharp\sample201\sample201\bin\Debug\sample201.pdb
+D:\study-csharp\sample201\sample201\obj\Debug\sample201.csprojResolveAssemblyReference.cache
+D:\study-csharp\sample201\sample201\obj\Debug\sample201.csproj.CoreCompileInputs.cache
+D:\study-csharp\sample201\sample201\obj\Debug\sample201.exe
+D:\study-csharp\sample201\sample201\obj\Debug\sample201.pdb

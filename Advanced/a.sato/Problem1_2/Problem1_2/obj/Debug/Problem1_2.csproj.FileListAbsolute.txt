@@ -1,0 +1,6 @@
+D:\study-csharp\Problem1_2\Problem1_2\bin\Debug\Problem1_2.exe.config
+D:\study-csharp\Problem1_2\Problem1_2\bin\Debug\Problem1_2.exe
+D:\study-csharp\Problem1_2\Problem1_2\bin\Debug\Problem1_2.pdb
+D:\study-csharp\Problem1_2\Problem1_2\obj\Debug\Problem1_2.csproj.CoreCompileInputs.cache
+D:\study-csharp\Problem1_2\Problem1_2\obj\Debug\Problem1_2.exe
+D:\study-csharp\Problem1_2\Problem1_2\obj\Debug\Problem1_2.pdb

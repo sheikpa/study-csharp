@@ -1,0 +1,7 @@
+D:\study-csharp\sample101-framework\sample101-framework\bin\Debug\sample101-framework.exe.config
+D:\study-csharp\sample101-framework\sample101-framework\bin\Debug\sample101-framework.exe
+D:\study-csharp\sample101-framework\sample101-framework\bin\Debug\sample101-framework.pdb
+D:\study-csharp\sample101-framework\sample101-framework\obj\Debug\sample101-framework.csprojResolveAssemblyReference.cache
+D:\study-csharp\sample101-framework\sample101-framework\obj\Debug\sample101-framework.csproj.CoreCompileInputs.cache
+D:\study-csharp\sample101-framework\sample101-framework\obj\Debug\sample101-framework.exe
+D:\study-csharp\sample101-framework\sample101-framework\obj\Debug\sample101-framework.pdb

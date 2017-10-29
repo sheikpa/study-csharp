@@ -1,0 +1,6 @@
+D:\study-csharp\sample103\sample103\obj\Debug\sample103.csproj.CoreCompileInputs.cache
+D:\study-csharp\sample103\sample103\bin\Debug\sample103.exe.config
+D:\study-csharp\sample103\sample103\bin\Debug\sample103.exe
+D:\study-csharp\sample103\sample103\bin\Debug\sample103.pdb
+D:\study-csharp\sample103\sample103\obj\Debug\sample103.exe
+D:\study-csharp\sample103\sample103\obj\Debug\sample103.pdb
