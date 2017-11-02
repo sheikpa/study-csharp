@@ -6,39 +6,34 @@ using System.Threading.Tasks;
 
 namespace Problem
 {
-    class Problem_5_7
+    class Problem_5_9
     {
         static void Main(string[] args)
         {
             Random rnd = new Random();
-            int sz = 5;
+            int sz = 10;
+
             int[] data = new int[sz];
-            int sum = 0;
-            int avg = 0;
+
             for (int i = 0; i < sz; i++)
             {
-                data[i] = rnd.Next(1, 10);
+                data[i] = rnd.Next(0, 100);
                 Console.Write("{0} ", data[i]);
-                sum = sum + data[i];
             }
             Console.WriteLine();
-            Console.WriteLine("合計値：{0}", sum);
-            avg = sum / sz;
-            Console.WriteLine("平均値：{0}", avg);
-
-            Console.Write("平均値より大きい数：");
+            Console.Write("50以上の数：");
             foreach (int i in data)
             {
-                if (i > avg)
+                if (i >= 50)
                 {
-                    Console.Write("{0} ",i);
+                    Console.Write("{0} ", i);
                 }
             }
             Console.WriteLine();
-            Console.Write("平均値より小さい数：");
+            Console.Write("50未満の数：");
             foreach (int i in data)
             {
-                if (i < avg)
+                if (i <= 50)
                 {
                     Console.Write("{0} ", i);
                 }
