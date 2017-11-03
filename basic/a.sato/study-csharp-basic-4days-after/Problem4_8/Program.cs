@@ -10,8 +10,7 @@ namespace Problem4_8
     {
         static void Main(string[] args)
         {
-            String a = "a";
-            while (a == "a")
+            while (true)
             {
                 Console.Write("0以上の数値を入力してください:");
                 int i = int.Parse(Console.ReadLine());

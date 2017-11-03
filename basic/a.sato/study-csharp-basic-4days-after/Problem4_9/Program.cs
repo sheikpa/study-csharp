@@ -10,9 +10,8 @@ namespace Problem4_9
     {
         static void Main(string[] args)
         {
-            String a = "a";
             Random rnd = new Random();
-            while (a == "a")
+            while (true)
             {
                 int dice = rnd.Next(1, 100);
                 Console.WriteLine(dice);

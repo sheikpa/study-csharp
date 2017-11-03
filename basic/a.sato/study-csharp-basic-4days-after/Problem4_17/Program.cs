@@ -22,11 +22,8 @@ namespace Problem4_17
                     {
                         Console.Write("■");
                     }
-                    if (j == 9)
-                    {
-                        Console.Write("\n");
-                    }
                 }
+                Console.Write("\n");
             }
         }
     }
