@@ -15,7 +15,7 @@ namespace Problem4_12
             int kisuu = 0;
             for (int i = 0; i < 5; i++)
             {
-                int dice = rnd.Next(1, 100);
+                int dice = rnd.Next(1, 101);
                 Console.WriteLine(dice);
                 if (dice % 2 == 0)
                 {

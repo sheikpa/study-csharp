@@ -13,7 +13,7 @@ namespace Problem4_10
             Random rdn = new Random();
             for (int i = 0; i < 5; i++)
             {
-                int dice = rdn.Next(1, 100);
+                int dice = rdn.Next(1, 101);
                 Console.WriteLine(dice);
             }
         }

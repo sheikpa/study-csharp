@@ -15,7 +15,7 @@ namespace Problem4_11
             int max = 1;
             for (int i = 0; i < 5; i++)
             {
-                int dice = rdn.Next(1, 100);
+                int dice = rdn.Next(1, 101);
                 Console.WriteLine(dice);
                 if (dice < min)
                 {

@@ -11,7 +11,7 @@ namespace Problem4_14
         static void Main(string[] args)
         {
             Random rnd = new Random();
-            int dice = rnd.Next(1, 10);
+            int dice = rnd.Next(1, 11);
             string flg = "";
             if (dice % 2 == 0)
             {

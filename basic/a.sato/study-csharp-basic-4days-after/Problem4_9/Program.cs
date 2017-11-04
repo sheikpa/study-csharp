@@ -13,7 +13,7 @@ namespace Problem4_9
             Random rnd = new Random();
             while (true)
             {
-                int dice = rnd.Next(1, 100);
+                int dice = rnd.Next(1, 101);
                 Console.WriteLine(dice);
                 if (dice % 10 == 0)
                 {
