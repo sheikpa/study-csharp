@@ -16,13 +16,15 @@ namespace Problem
             Console.Write("b=");
             int b = int.Parse(Console.ReadLine());
 
-            if (a < 1 || b < 1 || a > 10 || b > 10)
+            if (a < 1 || b < 1 || 10 < a || 10 < b)
+          //if (a < 1 || b < 1 || a > 10 || b > 10)
             {
                 Console.WriteLine("範囲外です。");
             }
             else
             {
-                if (a > b)
+                if (b < a)
+              //if (a > b)
                 {
                     Console.WriteLine("aの方が大きいです。");
                 }

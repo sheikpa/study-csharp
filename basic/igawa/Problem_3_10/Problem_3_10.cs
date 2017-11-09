@@ -14,7 +14,8 @@ namespace Problem
             string str1 = Console.ReadLine();
             Console.Write("文字列2を入力");
             string str2 = Console.ReadLine();
-            if (str1 == str2)
+            if (str1.Equals(str2))
+            //if (str1 == str2)
             {
                 Console.WriteLine("2つの文字は等しい");
             }

@@ -11,7 +11,8 @@ namespace Problem
         static void Main(string[] args)
         {
             double[] b = { 0.2,-5.1,3.2,1.8};
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < b.Length; i++)
+          //for (int i = 0; i < 4; i++)
             {
                 Console.Write("b[{0}]={1} ", i, b[i]);
             }

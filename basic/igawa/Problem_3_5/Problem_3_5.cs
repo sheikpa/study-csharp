@@ -14,7 +14,8 @@ namespace Problem_3_5
             int a = int.Parse(Console.ReadLine());
             Console.WriteLine("a=" + a);
 
-            if (a > 30 && a <= 70)
+            if (30 < a && a <= 70)
+            //if (a > 30 && a <= 70)
             {
                 Console.WriteLine("30より大きく70以下です。");
             }

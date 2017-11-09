@@ -12,9 +12,10 @@ namespace Problem
         {
             for(int i = 1; i <= 9; i++)
             {
-                for(int n=1;n <=9; n++)
+                for (int j = 1; j <= 9; j++)
+              //for (int n = 1; n <= 9; n++)
                 {
-                    Console.Write("{0}*{1}={2} ", i, n,i*n);
+                    Console.Write("{0}*{1}={2} ", i, j,i*j);
                 }
                 Console.WriteLine();
             }

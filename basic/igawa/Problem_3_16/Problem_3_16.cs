@@ -15,11 +15,14 @@ namespace Problem
 
             if (a % 2 == 0)
             {
-                if(a % 3 == 0)
+                if (a % 3 == 0)
                 {
                     Console.WriteLine("2と3の公倍数です。");
                 }
-                Console.WriteLine("2の倍数です。");
+                else
+                {
+                    Console.WriteLine("2の倍数です。");
+                }
             }
             else if (a % 3 == 0)
             {

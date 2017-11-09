@@ -12,13 +12,15 @@ namespace Problem
         {
             Console.Write("0から100までの整数値を入力:");
             int a = int.Parse(Console.ReadLine());
-            
-            if (a < 80 && a >= 20)
+
+            if (20 <= a && a < 80)
+          //if (a < 80 && a >= 20)
             {
-                Console.WriteLine("20以上か80未満です。");
-            }else if( (a < 20 && a >= 0) || (a <= 100 && a >= 80) )
+                Console.WriteLine("20以上80未満です。");
+            }else if((0 <= a && a < 20) || ( 80 <= a && a <= 100))
+          //}else if( (a < 20 && a >= 0) || (a <= 100 && a >= 80) )
             {
-                Console.WriteLine("20未満かか80以上です。");
+                Console.WriteLine("20未満か、80以上です。");
             }
             else
             {

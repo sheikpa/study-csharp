@@ -13,7 +13,8 @@ namespace Problem
             Console.Write("1から100までの整数値を入力してください。");
             int a = int.Parse(Console.ReadLine());
 
-            if ( a < 1 || a > 100)
+            if ( a < 1 || 100 < a)
+          //if ( a < 1 || a > 100)
             {
                 Console.WriteLine("適切な値を入力してください。");
             }

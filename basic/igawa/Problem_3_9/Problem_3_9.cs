@@ -12,7 +12,8 @@ namespace Problem
         {
             Console.Write("文字列を入力");
             string str = Console.ReadLine();
-            if (str == "abc" )
+            if ("abc".Equals(str))
+            //if (str == "abc" )
             {
                 Console.WriteLine("abcです。");
             }

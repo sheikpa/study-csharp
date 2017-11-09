@@ -14,7 +14,8 @@ namespace Problem
             int a = int.Parse(Console.ReadLine());
             Console.WriteLine("a=" + a);
 
-            if (a >= 80 || a <= 20)
+            if (a <= 20 || 80 <= a)
+            //if (a >= 80 || a <= 20)
             {
                 Console.WriteLine("20以下か80以上の値です。");
             }

@@ -15,7 +15,8 @@ namespace Problem3_6{
 
             if(a > b){
                 Console.WriteLine("aはbよりも大きい");
-            }else if(a < b){
+            }else if(b > a){
+            //}else if(a < b){
                 Console.WriteLine("aはbよりも小さい");
             }else{
                 Console.WriteLine("aはbと等しい");

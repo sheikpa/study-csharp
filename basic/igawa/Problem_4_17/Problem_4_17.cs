@@ -12,9 +12,11 @@ namespace Problem
         {
             for (int i = 1; i <= 10; i++)
             {
-                for (int n = 1; n<=10; n++)
+                for (int j = 1; j <= 10; j++)
+              //for (int n = 1; n <= 10; n++)
                 {
-                    if(i >= n)
+                    if (j <= i)
+                  //if (i >= n)
                     {
                         Console.Write("■");
                     }

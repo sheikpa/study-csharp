@@ -11,19 +11,22 @@ namespace Problem
         static void Main(string[] args)
         {
             Random rnd = new Random();
-            int sz = 7;
+          //int sz = 7;
+            int[] data = new int[7];
+          //int[] data = new int[sz];
 
-            int[] data = new int[sz];
-
-            for (int i = 0; i < sz; i++)
+            for (int i = 0; i < data.Length; i++)
+          //for (int i = 0; i < sz; i++)
             {
                 data[i] = rnd.Next(1, 10);
                 Console.Write("{0} ", data[i]);
             }
             Console.WriteLine();
-            for (int j = 0; j < sz; j++)
+            for (int i = 0; i < data.Length; i++)
+          //for (int j = 0; j < sz; j++)
             {
-                for (int i = 0; i < data[j]; i++)
+                for (int j = 0; j < data[i]; j++)
+              //for (int i = 0; i < data[j]; i++)
                 {
                     Console.Write("*");
                 }

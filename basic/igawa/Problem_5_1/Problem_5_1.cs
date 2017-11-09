@@ -12,7 +12,8 @@ namespace Problem
         {
             Random rnd = new Random();
             int[] a = new int[7];
-            for(int i = 0; i<7; i++)
+            for(int i = 0; i < a.Length; i++)
+          //for(int i = 0; i < 7; i++)
             {
                 a[i] = rnd.Next(1, 10);
                 Console.Write("a[{0}]={1} ", i, a[i]);

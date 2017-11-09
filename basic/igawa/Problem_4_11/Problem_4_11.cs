@@ -18,7 +18,9 @@ namespace Problem
             {
                 n = rnd.Next(1, 100);
                 Console.WriteLine(n);
-                if (n > max)
+
+                if (max < n)
+              //if (n > max)
                 {
                     max = n;
                 }

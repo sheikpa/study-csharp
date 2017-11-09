@@ -11,11 +11,13 @@ namespace Problem
         static void Main(string[] args)
         {
             Random rnd = new Random();
-            int sz = 5;
-            int[] data = new int[sz];
+          //int sz = 5;
+            int[] data = new int[5];
+          //int[] data = new int[sz];
             int sum = 0;
             int avg = 0;
-            for (int i = 0; i < sz; i++)
+            for (int i = 0; i < data.Length; i++)
+          //for (int i = 0; i < sz; i++)
             {
                 data[i] = rnd.Next(1, 10);
                 Console.Write("{0} ", data[i]);
@@ -23,13 +25,15 @@ namespace Problem
             }
             Console.WriteLine();
             Console.WriteLine("合計値：{0}", sum);
-            avg = sum / sz;
+            avg = sum / data.Length;
+          //avg = sum / sz;
             Console.WriteLine("平均値：{0}", avg);
 
             Console.Write("平均値より大きい数：");
             foreach (int i in data)
             {
-                if (i > avg)
+                if (avg < i)
+              //if (i > avg)
                 {
                     Console.Write("{0} ",i);
                 }

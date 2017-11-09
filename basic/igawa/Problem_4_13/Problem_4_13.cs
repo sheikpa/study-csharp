@@ -16,7 +16,8 @@ namespace Probrem
 
             for (int i = 1; i <= n; i++)
             {
-                if(n >= 5)
+                if (5 <= n)
+              //if (n >= 5)
                 {
                     Console.Write("★");
                 }

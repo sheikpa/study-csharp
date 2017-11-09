@@ -12,7 +12,8 @@ namespace Problem
         {
             Random rnd = new Random();
             int[] data = new int[10];
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < data.Length; i++)
+          //for (int i = 0; i < 10; i++)
             {
                 data[i] = rnd.Next(1, 100);
                 Console.Write("{0} ", data[i]);
