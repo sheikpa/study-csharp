@@ -10,13 +10,14 @@ namespace Problem7_1
     {
         //  メンバ変数number
         private int number = 0;
+        //  メンバ変数comment
+        private string comment = "";
+
         public int Number
         {
             set { number = value; }
             get { return number; }
         }
-        //  メンバ変数comment
-        private string comment = "";
         public string Comment
         {
             set { comment = value; }
