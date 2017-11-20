@@ -78,7 +78,7 @@ namespace Problem8_13
                         countArray2++;
                     }
                 }
-                if (countArray1 >= array1.Length &&
+                if (countArray1 >= array1.Length ||
                     countArray2 >= array2.Length)
                 {
                     break;
@@ -159,9 +159,32 @@ namespace Problem8_13
                         countArray2++;
                     }
                 }
-                if (countArray1 >= array1.Length &&
+                if (countArray1 >= array1.Length ||
                     countArray2 >= array2.Length)
                 {
+                    if (countArray1 < array1.Length)
+                    {
+                        for (int i = countArray1; i < array1.Length; i++)
+                        {
+                            if (temp[countTemp - 1] != array1[countArray1])
+                            {
+                                temp[countTemp] = array1[countArray1];
+                                countTemp++;
+                            }
+                        }
+                    }
+
+                    if (countArray2 < array2.Length)
+                    {
+                        for (int i = countArray2; i < array2.Length; i++)
+                        {
+                            if (temp[countTemp - 1] != array2[countArray2])
+                            {
+                                temp[countTemp] = array2[countArray2];
+                                countTemp++;
+                            }
+                        }
+                    }
                     break;
                 }
             }

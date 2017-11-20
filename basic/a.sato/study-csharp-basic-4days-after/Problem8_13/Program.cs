@@ -10,8 +10,21 @@ namespace Problem8_13
     {
         static void Main(string[] args)
         {
-            int[] array1 = new int[10] { 4, 9, 4, 3, 6, 8, 7, 1, 3, 10 };
-            int[] array2 = new int[10] { 7, 3, 10, 7, 5, 9, 4, 9, 9, 1 };
+            int[] array1 = new int[10];
+            int[] array2 = new int[10];
+
+            Random rnd = new Random();
+
+            for (int i = 0; i < array1.Length; i++)
+            {
+                array1[i] = rnd.Next(1, 11);
+            }
+
+            for (int i = 0; i < array2.Length; i++)
+            {
+                array2[i] = rnd.Next(1, 11);
+            }
+
             ArraySousa.consoleOutput("配列１：", array1);
             ArraySousa.consoleOutput("配列２：", array2);
 
