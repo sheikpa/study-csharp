@@ -12,6 +12,10 @@ namespace Dentaku
 {
     public partial class Form1 : Form
     {
+        internal string beforeNum = "";
+        internal string beforeEnzan = "";
+        internal string beforeKeka = "";
+
         public Form1()
         {
             InitializeComponent();
@@ -21,6 +25,7 @@ namespace Dentaku
 
         private void btn1_Click(object sender, EventArgs e)
         {
+            enzanKeka();
             zeroClear();
             txtKekka.Text = txtKekka.Text + Convert.ToString("1");
             kanma();
@@ -28,6 +33,7 @@ namespace Dentaku
 
         private void btn2_Click(object sender, EventArgs e)
         {
+            enzanKeka();
             zeroClear();
             txtKekka.Text = txtKekka.Text + Convert.ToString("2");
             kanma();
@@ -35,6 +41,7 @@ namespace Dentaku
 
         private void btn3_Click(object sender, EventArgs e)
         {
+            enzanKeka();
             zeroClear();
             txtKekka.Text = txtKekka.Text + Convert.ToString("3");
             kanma();
@@ -42,6 +49,7 @@ namespace Dentaku
 
         private void btn4_Click(object sender, EventArgs e)
         {
+            enzanKeka();
             zeroClear();
             txtKekka.Text = txtKekka.Text + Convert.ToString("4");
             kanma();
@@ -49,6 +57,7 @@ namespace Dentaku
 
         private void btn5_Click(object sender, EventArgs e)
         {
+            enzanKeka();
             zeroClear();
             txtKekka.Text = txtKekka.Text + Convert.ToString("5");
             kanma();
@@ -56,6 +65,7 @@ namespace Dentaku
 
         private void btn6_Click(object sender, EventArgs e)
         {
+            enzanKeka();
             zeroClear();
             txtKekka.Text = txtKekka.Text + Convert.ToString("6");
             kanma();
@@ -63,6 +73,7 @@ namespace Dentaku
 
         private void btn7_Click(object sender, EventArgs e)
         {
+            enzanKeka();
             zeroClear();
             txtKekka.Text = txtKekka.Text + Convert.ToString("7");
             kanma();
@@ -70,6 +81,7 @@ namespace Dentaku
 
         private void btn8_Click(object sender, EventArgs e)
         {
+            enzanKeka();
             zeroClear();
             txtKekka.Text = txtKekka.Text + Convert.ToString("8");
             kanma();
@@ -77,6 +89,7 @@ namespace Dentaku
 
         private void btn9_Click(object sender, EventArgs e)
         {
+            enzanKeka();
             zeroClear();
             txtKekka.Text = txtKekka.Text + Convert.ToString("9");
             kanma();
@@ -85,6 +98,7 @@ namespace Dentaku
         private void btn0_Click(object sender, EventArgs e)
         {
 
+            enzanKeka();
             string temp = Convert.ToString(txtKekka.Text);
 
             if (temp == "" || temp == "0")
@@ -104,6 +118,7 @@ namespace Dentaku
 
         private void btn00_Click(object sender, EventArgs e)
         {
+            enzanKeka();
             string temp = Convert.ToString(txtKekka.Text);
 
             if (temp == "" || temp == "0")
@@ -143,6 +158,149 @@ namespace Dentaku
         {
             txtKeka.Text = Convert.ToString("");
             txtKekka.Text = Convert.ToString("");
+        }
+
+        private void btnTasu_Click(object sender, EventArgs e)
+        {
+            if (!(Convert.ToString(txtKekka.Text).Contains("+")) ||
+                 (Convert.ToString(txtKekka.Text).Contains("-")) ||
+                 (Convert.ToString(txtKekka.Text).Contains("X")) ||
+                 (Convert.ToString(txtKekka.Text).Contains("/")))
+            {
+                if (beforeNum != "")
+                {
+                    beforeKeka = (int.Parse(beforeNum) + int.Parse(Convert.ToString(txtKekka.Text))).ToString();
+                }
+
+                beforeNum = Convert.ToString(txtKekka.Text);
+
+                txtKekka.Text = "+";
+
+                txtKeka.Text = txtKeka.Text + " " + beforeNum;
+            }
+        }
+
+        private void btnHiku_Click(object sender, EventArgs e)
+        {
+            if (!(Convert.ToString(txtKekka.Text).Contains("+")) ||
+                 (Convert.ToString(txtKekka.Text).Contains("-")) ||
+                 (Convert.ToString(txtKekka.Text).Contains("X")) ||
+                 (Convert.ToString(txtKekka.Text).Contains("/")))
+            {
+                if (beforeNum != "")
+                {
+                    beforeKeka = (int.Parse(beforeNum) - int.Parse(Convert.ToString(txtKekka.Text))).ToString();
+                }
+
+                beforeNum = Convert.ToString(txtKekka.Text);
+
+                txtKekka.Text = "-";
+
+                txtKeka.Text = txtKeka.Text + " " + beforeNum;
+            }
+        }
+
+        private void btnWaru_Click(object sender, EventArgs e)
+        {
+            if (!(Convert.ToString(txtKekka.Text).Contains("+")) ||
+                 (Convert.ToString(txtKekka.Text).Contains("-")) ||
+                 (Convert.ToString(txtKekka.Text).Contains("X")) ||
+                 (Convert.ToString(txtKekka.Text).Contains("/")))
+            {
+                if (beforeNum != "")
+                {
+                    if (int.Parse(Convert.ToString(txtKekka.Text)) == 0)
+                    {
+                        txtKekka.Text = "0で除算することはできません";
+                    }
+                    else
+                    {
+                        beforeKeka = (int.Parse(beforeNum) / int.Parse(Convert.ToString(txtKekka.Text))).ToString();
+                    }
+                }
+
+                beforeNum = Convert.ToString(txtKekka.Text);
+
+                txtKekka.Text = "/";
+
+                txtKeka.Text = txtKeka.Text + " " + beforeNum;
+            }
+        }
+
+        private void btnKakeru_Click(object sender, EventArgs e)
+        {
+            if (!(Convert.ToString(txtKekka.Text).Contains("+")) ||
+                 (Convert.ToString(txtKekka.Text).Contains("-")) ||
+                 (Convert.ToString(txtKekka.Text).Contains("X")) ||
+                 (Convert.ToString(txtKekka.Text).Contains("/")))
+            {
+                if (beforeNum != "")
+                {
+                    beforeKeka = (int.Parse(beforeNum) * int.Parse(Convert.ToString(txtKekka.Text))).ToString();
+                }
+
+                beforeNum = Convert.ToString(txtKekka.Text);
+
+                txtKekka.Text = "X";
+
+                txtKeka.Text = txtKeka.Text + " " + beforeNum;
+            }
+        }
+
+        private void btnEqual_Click(object sender, EventArgs e)
+        {
+            switch (beforeEnzan)
+            {
+                case "+":
+                    if (beforeKeka != "")
+                    {
+                        txtKekka.Text = (int.Parse(beforeKeka) + int.Parse(Convert.ToString(txtKekka.Text))).ToString();
+                    }
+                    else
+                    {
+                        txtKekka.Text = (int.Parse(beforeNum) + int.Parse(Convert.ToString(txtKekka.Text))).ToString();
+                    }
+                    break;
+                case "-":
+                    if (beforeKeka != "")
+                    {
+                        txtKekka.Text = (int.Parse(beforeKeka) - int.Parse(Convert.ToString(txtKekka.Text))).ToString();
+                    }
+                    else
+                    {
+                        txtKekka.Text = (int.Parse(beforeNum) - int.Parse(Convert.ToString(txtKekka.Text))).ToString();
+                    }
+                    break;
+                case "/":
+                    if (int.Parse(Convert.ToString(txtKekka.Text)) == 0)
+                    {
+                        txtKekka.Text = "0で除算することはできません";
+                    }
+                    else
+                    {
+                        if (beforeKeka != "")
+                        {
+                            txtKekka.Text = (int.Parse(beforeKeka) / int.Parse(Convert.ToString(txtKekka.Text))).ToString();
+                        }
+                        else
+                        {
+                            txtKekka.Text = (int.Parse(beforeNum) / int.Parse(Convert.ToString(txtKekka.Text))).ToString();
+                        }
+                    }
+                    break;
+                case "X":
+                    if (beforeKeka != "")
+                    {
+                        txtKekka.Text = (int.Parse(beforeKeka) * int.Parse(Convert.ToString(txtKekka.Text))).ToString();
+                    }
+                    else
+                    {
+                        txtKekka.Text = (int.Parse(beforeNum) * int.Parse(Convert.ToString(txtKekka.Text))).ToString();
+                    }
+                    break;
+            }
+
+            txtKeka.Text = "";
         }
 
         private void zeroClear()
@@ -245,5 +403,17 @@ namespace Dentaku
             txtKekka.Text = Convert.ToString(result);
         }
 
+        private void enzanKeka()
+        {
+            if (Convert.ToString(txtKekka.Text).Contains("+") ||
+                Convert.ToString(txtKekka.Text).Contains("-") ||
+                Convert.ToString(txtKekka.Text).Contains("X") ||
+                Convert.ToString(txtKekka.Text).Contains("/"))
+            {
+                beforeEnzan = Convert.ToString(txtKekka.Text);
+                txtKekka.Text = "";
+                txtKeka.Text = txtKeka.Text + " " + beforeEnzan;
+            }
+        }
     }
 }

@@ -30,6 +30,7 @@ namespace Dentaku
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.txtKeka = new System.Windows.Forms.Label();
             this.txtKekka = new System.Windows.Forms.TextBox();
             this.btnDel = new System.Windows.Forms.Button();
@@ -64,10 +65,10 @@ namespace Dentaku
             // 
             // txtKekka
             // 
-            this.txtKekka.Font = new System.Drawing.Font("メイリオ", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txtKekka.Font = new System.Drawing.Font("ＭＳ 明朝", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.txtKekka.Location = new System.Drawing.Point(12, 31);
             this.txtKekka.Name = "txtKekka";
-            this.txtKekka.Size = new System.Drawing.Size(402, 72);
+            this.txtKekka.Size = new System.Drawing.Size(402, 50);
             this.txtKekka.TabIndex = 1;
             this.txtKekka.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -102,6 +103,7 @@ namespace Dentaku
             this.btnKakeru.TabIndex = 2;
             this.btnKakeru.Text = "×";
             this.btnKakeru.UseVisualStyleBackColor = true;
+            this.btnKakeru.Click += new System.EventHandler(this.btnKakeru_Click);
             // 
             // btn7
             // 
@@ -145,6 +147,7 @@ namespace Dentaku
             this.btnWaru.TabIndex = 2;
             this.btnWaru.Text = "÷";
             this.btnWaru.UseVisualStyleBackColor = true;
+            this.btnWaru.Click += new System.EventHandler(this.btnWaru_Click);
             // 
             // btn4
             // 
@@ -188,6 +191,7 @@ namespace Dentaku
             this.btnHiku.TabIndex = 2;
             this.btnHiku.Text = "－";
             this.btnHiku.UseVisualStyleBackColor = true;
+            this.btnHiku.Click += new System.EventHandler(this.btnHiku_Click);
             // 
             // btn1
             // 
@@ -231,6 +235,7 @@ namespace Dentaku
             this.btnTasu.TabIndex = 2;
             this.btnTasu.Text = "＋";
             this.btnTasu.UseVisualStyleBackColor = true;
+            this.btnTasu.Click += new System.EventHandler(this.btnTasu_Click);
             // 
             // btn0
             // 
@@ -252,6 +257,7 @@ namespace Dentaku
             this.btnEqual.TabIndex = 2;
             this.btnEqual.Text = "＝";
             this.btnEqual.UseVisualStyleBackColor = true;
+            this.btnEqual.Click += new System.EventHandler(this.btnEqual_Click);
             // 
             // btn00
             // 
@@ -289,8 +295,9 @@ namespace Dentaku
             this.Controls.Add(this.btnDel);
             this.Controls.Add(this.txtKekka);
             this.Controls.Add(this.txtKeka);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "電卓";
             this.ResumeLayout(false);
             this.PerformLayout();
 
