@@ -169,10 +169,10 @@ namespace Dentaku
             {
                 if (beforeNum != "")
                 {
-                    beforeKeka = (int.Parse(beforeNum) + int.Parse(Convert.ToString(txtKekka.Text))).ToString();
+                    beforeKeka = (int.Parse(beforeNum) + int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
                 }
 
-                beforeNum = Convert.ToString(txtKekka.Text);
+                beforeNum = Convert.ToString(txtKekka.Text).Replace(",", "");
 
                 txtKekka.Text = "+";
 
@@ -189,10 +189,10 @@ namespace Dentaku
             {
                 if (beforeNum != "")
                 {
-                    beforeKeka = (int.Parse(beforeNum) - int.Parse(Convert.ToString(txtKekka.Text))).ToString();
+                    beforeKeka = (int.Parse(beforeNum) - int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
                 }
 
-                beforeNum = Convert.ToString(txtKekka.Text);
+                beforeNum = Convert.ToString(txtKekka.Text).Replace(",", "");
 
                 txtKekka.Text = "-";
 
@@ -215,11 +215,11 @@ namespace Dentaku
                     }
                     else
                     {
-                        beforeKeka = (int.Parse(beforeNum) / int.Parse(Convert.ToString(txtKekka.Text))).ToString();
+                        beforeKeka = (int.Parse(beforeNum) / int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
                     }
                 }
 
-                beforeNum = Convert.ToString(txtKekka.Text);
+                beforeNum = Convert.ToString(txtKekka.Text).Replace(",", "");
 
                 txtKekka.Text = "/";
 
@@ -236,10 +236,10 @@ namespace Dentaku
             {
                 if (beforeNum != "")
                 {
-                    beforeKeka = (int.Parse(beforeNum) * int.Parse(Convert.ToString(txtKekka.Text))).ToString();
+                    beforeKeka = (int.Parse(beforeNum) * int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
                 }
 
-                beforeNum = Convert.ToString(txtKekka.Text);
+                beforeNum = Convert.ToString(txtKekka.Text).Replace(",", "");
 
                 txtKekka.Text = "X";
 
@@ -249,58 +249,68 @@ namespace Dentaku
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
+            String temp = "";
             switch (beforeEnzan)
             {
                 case "+":
                     if (beforeKeka != "")
                     {
-                        txtKekka.Text = (int.Parse(beforeKeka) + int.Parse(Convert.ToString(txtKekka.Text))).ToString();
+                        temp = (int.Parse(beforeKeka) + int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
                     }
                     else
                     {
-                        txtKekka.Text = (int.Parse(beforeNum) + int.Parse(Convert.ToString(txtKekka.Text))).ToString();
+                        temp = (int.Parse(beforeNum) + int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
                     }
                     break;
                 case "-":
                     if (beforeKeka != "")
                     {
-                        txtKekka.Text = (int.Parse(beforeKeka) - int.Parse(Convert.ToString(txtKekka.Text))).ToString();
+                        temp = (int.Parse(beforeKeka) - int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
                     }
                     else
                     {
-                        txtKekka.Text = (int.Parse(beforeNum) - int.Parse(Convert.ToString(txtKekka.Text))).ToString();
+                        temp = (int.Parse(beforeNum) - int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
                     }
                     break;
                 case "/":
                     if (int.Parse(Convert.ToString(txtKekka.Text)) == 0)
                     {
-                        txtKekka.Text = "0で除算することはできません";
+                        temp = "0で除算することはできません";
                     }
                     else
                     {
                         if (beforeKeka != "")
                         {
-                            txtKekka.Text = (int.Parse(beforeKeka) / int.Parse(Convert.ToString(txtKekka.Text))).ToString();
+                            temp = (int.Parse(beforeKeka) / int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
                         }
                         else
                         {
-                            txtKekka.Text = (int.Parse(beforeNum) / int.Parse(Convert.ToString(txtKekka.Text))).ToString();
+                            temp = (int.Parse(beforeNum) / int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
                         }
                     }
                     break;
                 case "X":
                     if (beforeKeka != "")
                     {
-                        txtKekka.Text = (int.Parse(beforeKeka) * int.Parse(Convert.ToString(txtKekka.Text))).ToString();
+                        temp = (int.Parse(beforeKeka) * int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
                     }
                     else
                     {
-                        txtKekka.Text = (int.Parse(beforeNum) * int.Parse(Convert.ToString(txtKekka.Text))).ToString();
+                        temp = (int.Parse(beforeNum) * int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
                     }
                     break;
             }
 
             txtKeka.Text = "";
+            if (temp == "0で除算することはできません")
+            {
+                txtKekka.Text = temp;
+            }
+            else
+            {
+                txtKekka.Text = temp;
+                kanma();
+            }
         }
 
         private void zeroClear()
@@ -410,7 +420,7 @@ namespace Dentaku
                 Convert.ToString(txtKekka.Text).Contains("X") ||
                 Convert.ToString(txtKekka.Text).Contains("/"))
             {
-                beforeEnzan = Convert.ToString(txtKekka.Text);
+                beforeEnzan = Convert.ToString(txtKekka.Text).Replace(",", "");
                 txtKekka.Text = "";
                 txtKeka.Text = txtKeka.Text + " " + beforeEnzan;
             }
