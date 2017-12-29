@@ -65,12 +65,14 @@ namespace Dentaku
             // 
             // txtKekka
             // 
-            this.txtKekka.Font = new System.Drawing.Font("ＭＳ 明朝", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txtKekka.Location = new System.Drawing.Point(12, 31);
+            this.txtKekka.Font = new System.Drawing.Font("ＭＳ 明朝", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txtKekka.Location = new System.Drawing.Point(10, 31);
             this.txtKekka.Name = "txtKekka";
-            this.txtKekka.Size = new System.Drawing.Size(402, 50);
+            this.txtKekka.Size = new System.Drawing.Size(402, 34);
             this.txtKekka.TabIndex = 1;
             this.txtKekka.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtKekka.TextChanged += new System.EventHandler(this.txtKekka_TextChanged);
+            this.txtKekka.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtKekka_KeyDown);
             // 
             // btnDel
             // 
