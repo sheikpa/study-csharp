@@ -185,15 +185,7 @@ namespace Dentaku
 
         private void btnWaru_Click(object sender, EventArgs e)
         {
-            if (int.Parse(Convert.ToString(txtKekka.Text)) == 0)
-            {
-                error();
-                return;
-            }
-            else
-            {
-                keisan("/");
-            }
+            keisan("/");
         }
 
         private void btnKakeru_Click(object sender, EventArgs e)
@@ -227,14 +219,9 @@ namespace Dentaku
                     }
                     break;
                 case "/":
-                    if (int.Parse(Convert.ToString(txtKekka.Text)) == 0)
+                    if (beforeKeka != "")
                     {
-                        error();
-                        return;
-                    }
-                    else
-                    {
-                        if (beforeKeka != "")
+                        try
                         {
                             if (int.Parse(beforeKeka) % int.Parse(Convert.ToString(txtKekka.Text)) == 0)
                             {
@@ -245,7 +232,15 @@ namespace Dentaku
                                 temp = "0";
                             }
                         }
-                        else
+                        catch (Exception ex)
+                        {
+                            error(erorreMsg);
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        try
                         {
                             if (int.Parse(beforeNum) % int.Parse(Convert.ToString(txtKekka.Text).Replace(",", "")) == 0)
                             {
@@ -255,6 +250,11 @@ namespace Dentaku
                             {
                                 temp = "0";
                             }
+                        }
+                        catch (Exception ex)
+                        {
+                            error(erorreMsg);
+                            return;
                         }
                     }
                     break;
@@ -348,12 +348,6 @@ namespace Dentaku
             if (e.KeyCode == Keys.Return)
             {
                 string temp = Convert.ToString(txtKekka.Text).Replace(",", "");
-
-                if (temp.IndexOf("/0") >= 0)
-                {
-                    error();
-                    return;
-                }
 
                 string numNext = "";
 
@@ -498,7 +492,15 @@ namespace Dentaku
                                         numKekka = (int.Parse(numKekka) * int.Parse(numKeika)).ToString();
                                         break;
                                     case "/":
-                                        numKekka = (int.Parse(numKekka) / int.Parse(numKeika)).ToString();
+                                        try
+                                        {
+                                            numKekka = (int.Parse(numKekka) / int.Parse(numKeika)).ToString();
+                                        }
+                                        catch (Exception ex)
+                                        {
+                                            error(erorreMsg);
+                                            return;
+                                        }
                                         break;
                                 }
                                 enzanshi = "+";
@@ -525,7 +527,15 @@ namespace Dentaku
                                         numKekka = (int.Parse(numKekka) * int.Parse(numKeika)).ToString();
                                         break;
                                     case "/":
-                                        numKekka = (int.Parse(numKekka) / int.Parse(numKeika)).ToString();
+                                        try
+                                        {
+                                            numKekka = (int.Parse(numKekka) / int.Parse(numKeika)).ToString();
+                                        }
+                                        catch (Exception ex)
+                                        {
+                                            error(erorreMsg);
+                                            return;
+                                        }
                                         break;
                                 }
                                 enzanshi = "-";
@@ -552,7 +562,15 @@ namespace Dentaku
                                         numKekka = (int.Parse(numKekka) * int.Parse(numKeika)).ToString();
                                         break;
                                     case "/":
-                                        numKekka = (int.Parse(numKekka) / int.Parse(numKeika)).ToString();
+                                        try
+                                        {
+                                            numKekka = (int.Parse(numKekka) / int.Parse(numKeika)).ToString();
+                                        }
+                                        catch (Exception ex)
+                                        {
+                                            error(erorreMsg);
+                                            return;
+                                        }
                                         break;
                                 }
                                 enzanshi = "*";
@@ -579,7 +597,14 @@ namespace Dentaku
                                         numKekka = (int.Parse(numKekka) * int.Parse(numKeika)).ToString();
                                         break;
                                     case "/":
-                                        numKekka = (int.Parse(numKekka) / int.Parse(numKeika)).ToString();
+                                        try {
+                                            numKekka = (int.Parse(numKekka) / int.Parse(numKeika)).ToString();
+                                        }
+                                        catch (Exception ex)
+                                        {
+                                            error(erorreMsg);
+                                            return;
+                                        }
                                         break;
                                 }
                                 enzanshi = "/";
@@ -601,7 +626,15 @@ namespace Dentaku
                         numKekka = (int.Parse(numKekka) * int.Parse(numKeika)).ToString();
                         break;
                     case "/":
-                        numKekka = (int.Parse(numKekka) / int.Parse(numKeika)).ToString();
+                        try
+                        {
+                            numKekka = (int.Parse(numKekka) / int.Parse(numKeika)).ToString();
+                        }
+                        catch (Exception ex)
+                        {
+                            error(erorreMsg);
+                            return;
+                        }
                         break;
                 }
 
@@ -633,13 +666,21 @@ namespace Dentaku
                             beforeNum = (int.Parse(beforeNum) * int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
                             break;
                         case ("/"):
-                            if (int.Parse(beforeNum) % int.Parse(Convert.ToString(txtKekka.Text).Replace(",", "")) == 0)
+                            try
                             {
-                                beforeNum = (int.Parse(beforeNum) / int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
+                                if (int.Parse(beforeNum) % int.Parse(Convert.ToString(txtKekka.Text).Replace(",", "")) == 0)
+                                {
+                                    beforeNum = (int.Parse(beforeNum) / int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
+                                }
+                                else
+                                {
+                                    beforeNum = "0";
+                                }
                             }
-                            else
+                            catch (Exception ex)
                             {
-                                beforeNum = "0";
+                                error(erorreMsg);
+                                return;
                             }
                             break;
                     }
@@ -777,10 +818,10 @@ namespace Dentaku
             }
         }
 
-        private void error()
+        private void error(string message)
         {
             txtKeka.Text = "";
-            txtKekka.Text = erorreMsg;
+            txtKekka.Text = message;
             txtKekka.Enabled = false;
             btnDel.Enabled = false;
             btn0.Enabled = false;
