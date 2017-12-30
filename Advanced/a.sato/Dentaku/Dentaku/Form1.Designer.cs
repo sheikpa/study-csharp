@@ -70,6 +70,7 @@ namespace Dentaku
             this.txtKekka.Name = "txtKekka";
             this.txtKekka.Size = new System.Drawing.Size(402, 34);
             this.txtKekka.TabIndex = 1;
+            this.txtKekka.Text = "0";
             this.txtKekka.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtKekka.TextChanged += new System.EventHandler(this.txtKekka_TextChanged);
             this.txtKekka.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtKekka_KeyDown);
@@ -307,7 +308,14 @@ namespace Dentaku
 
         private void label1_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            try
+            {
+                throw new NotImplementedException();
+            }
+            catch
+            {
+
+            }
         }
 
         #endregion

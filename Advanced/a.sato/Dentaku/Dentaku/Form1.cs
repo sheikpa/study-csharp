@@ -148,7 +148,7 @@ namespace Dentaku
         private void btnAllCl_Click(object sender, EventArgs e)
         {
             txtKeka.Text = Convert.ToString("");
-            txtKekka.Text = Convert.ToString("");
+            txtKekka.Text = Convert.ToString("0");
             beforeNum = "";
             beforeKeka = "";
             beforeEnzanshi = "";
@@ -216,6 +216,10 @@ namespace Dentaku
                     else
                     {
                         temp = (int.Parse(beforeNum) - int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
+                    }
+                    if (int.Parse(temp) < 0)
+                    {
+                        temp = "0";
                     }
                     break;
                 case "/":
@@ -487,6 +491,10 @@ namespace Dentaku
                                         break;
                                     case "-":
                                         numKekka = (int.Parse(numKekka) - int.Parse(numKeika)).ToString();
+                                        if (int.Parse(numKekka) < 0)
+                                        {
+                                            temp = "0";
+                                        }
                                         break;
                                     case "*":
                                         numKekka = (int.Parse(numKekka) * int.Parse(numKeika)).ToString();
@@ -522,6 +530,10 @@ namespace Dentaku
                                         break;
                                     case "-":
                                         numKekka = (int.Parse(numKekka) - int.Parse(numKeika)).ToString();
+                                        if (int.Parse(numKekka) < 0)
+                                        {
+                                            temp = "0";
+                                        }
                                         break;
                                     case "*":
                                         numKekka = (int.Parse(numKekka) * int.Parse(numKeika)).ToString();
@@ -557,6 +569,10 @@ namespace Dentaku
                                         break;
                                     case "-":
                                         numKekka = (int.Parse(numKekka) - int.Parse(numKeika)).ToString();
+                                        if (int.Parse(numKekka) < 0)
+                                        {
+                                            temp = "0";
+                                        }
                                         break;
                                     case "*":
                                         numKekka = (int.Parse(numKekka) * int.Parse(numKeika)).ToString();
@@ -592,6 +608,10 @@ namespace Dentaku
                                         break;
                                     case "-":
                                         numKekka = (int.Parse(numKekka) - int.Parse(numKeika)).ToString();
+                                        if (int.Parse(numKekka) < 0)
+                                        {
+                                            temp = "0";
+                                        }
                                         break;
                                     case "*":
                                         numKekka = (int.Parse(numKekka) * int.Parse(numKeika)).ToString();
@@ -621,6 +641,10 @@ namespace Dentaku
                         break;
                     case "-":
                         numKekka = (int.Parse(numKekka) - int.Parse(numKeika)).ToString();
+                        if (int.Parse(numKekka) < 0)
+                        {
+                            temp = "0";
+                        }
                         break;
                     case "*":
                         numKekka = (int.Parse(numKekka) * int.Parse(numKeika)).ToString();
@@ -661,6 +685,10 @@ namespace Dentaku
                             break;
                         case ("-"):
                             beforeNum = (int.Parse(beforeNum) - int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
+                            if (int.Parse(beforeNum) < 0)
+                            {
+                                beforeNum = "0";
+                            }
                             break;
                         case ("*"):
                             beforeNum = (int.Parse(beforeNum) * int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
@@ -688,8 +716,20 @@ namespace Dentaku
                 }
                 else
                 {
+                    equaleFlg = "";
                     beforeNum = Convert.ToString(txtKekka.Text).Replace(",", "");
-                    txtKekka.Text = enzanshi;
+                    if (enzanshi == "*")
+                    {
+                        txtKekka.Text = "X";
+                    }
+                    else if (enzanshi == "/")
+                    {
+                        txtKekka.Text = "÷";
+                    }
+                    else
+                    {
+                        txtKekka.Text = enzanshi;
+                    }
                 }
 
                 beforeEnzanshi = enzanshi;
@@ -806,7 +846,18 @@ namespace Dentaku
                     beforeEnzanshi.Contains("/"))
                 {
                     txtKekka.Text = "";
-                    txtKeka.Text = txtKeka.Text + " " + beforeEnzanshi;
+                    if (beforeEnzanshi == "*")
+                    {
+                        txtKeka.Text = txtKeka.Text + " " + "X";
+                    }
+                    else if (beforeEnzanshi == "/")
+                    {
+                        txtKeka.Text = txtKeka.Text + " " + "÷";
+                    }
+                    else
+                    {
+                        txtKeka.Text = txtKeka.Text + " " + beforeEnzanshi;
+                    }
                     enzanFlg = "";
                 }
             }
