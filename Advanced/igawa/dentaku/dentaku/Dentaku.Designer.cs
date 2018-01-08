@@ -1,6 +1,6 @@
 ﻿namespace dentaku
 {
-    partial class Form1
+    partial class Dentaku
     {
         /// <summary>
         /// 必要なデザイナー変数です。
@@ -59,7 +59,7 @@
             this.txtKeka.Size = new System.Drawing.Size(307, 17);
             this.txtKeka.TabIndex = 0;
             this.txtKeka.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.txtKeka.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
+            this.txtKeka.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown);
             // 
             // txtKekka
             // 
@@ -73,7 +73,7 @@
             this.txtKekka.TabIndex = 2;
             this.txtKekka.TabStop = false;
             this.txtKekka.Text = "0";
-            this.txtKekka.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
+            this.txtKekka.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown);
             // 
             // btnDel
             // 
@@ -87,7 +87,7 @@
             this.btnDel.Text = "DEL";
             this.btnDel.UseVisualStyleBackColor = true;
             this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
-            this.btnDel.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
+            this.btnDel.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown);
             // 
             // btnAllCl
             // 
@@ -101,7 +101,7 @@
             this.btnAllCl.Text = "ALL CL";
             this.btnAllCl.UseVisualStyleBackColor = true;
             this.btnAllCl.Click += new System.EventHandler(this.btnAllCl_Click);
-            this.btnAllCl.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
+            this.btnAllCl.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown);
             // 
             // btn9
             // 
@@ -115,7 +115,7 @@
             this.btn9.Text = "9";
             this.btn9.UseVisualStyleBackColor = true;
             this.btn9.Click += new System.EventHandler(this.btn0_Click);
-            this.btn9.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
+            this.btn9.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown);
             // 
             // btn8
             // 
@@ -129,7 +129,7 @@
             this.btn8.Text = "8";
             this.btn8.UseVisualStyleBackColor = true;
             this.btn8.Click += new System.EventHandler(this.btn0_Click);
-            this.btn8.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
+            this.btn8.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown);
             // 
             // btn7
             // 
@@ -143,7 +143,7 @@
             this.btn7.Text = "7";
             this.btn7.UseVisualStyleBackColor = true;
             this.btn7.Click += new System.EventHandler(this.btn0_Click);
-            this.btn7.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
+            this.btn7.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown);
             // 
             // btn6
             // 
@@ -157,7 +157,7 @@
             this.btn6.Text = "6";
             this.btn6.UseVisualStyleBackColor = true;
             this.btn6.Click += new System.EventHandler(this.btn0_Click);
-            this.btn6.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
+            this.btn6.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown);
             // 
             // btn5
             // 
@@ -171,7 +171,7 @@
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = true;
             this.btn5.Click += new System.EventHandler(this.btn0_Click);
-            this.btn5.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
+            this.btn5.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown);
             // 
             // btn4
             // 
@@ -185,7 +185,7 @@
             this.btn4.Text = "4";
             this.btn4.UseVisualStyleBackColor = true;
             this.btn4.Click += new System.EventHandler(this.btn0_Click);
-            this.btn4.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
+            this.btn4.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown);
             // 
             // btn3
             // 
@@ -199,7 +199,7 @@
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = true;
             this.btn3.Click += new System.EventHandler(this.btn0_Click);
-            this.btn3.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
+            this.btn3.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown);
             // 
             // btn2
             // 
@@ -213,7 +213,7 @@
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = true;
             this.btn2.Click += new System.EventHandler(this.btn0_Click);
-            this.btn2.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
+            this.btn2.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown);
             // 
             // btn1
             // 
@@ -227,7 +227,7 @@
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = true;
             this.btn1.Click += new System.EventHandler(this.btn0_Click);
-            this.btn1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
+            this.btn1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown);
             // 
             // btn0
             // 
@@ -241,7 +241,7 @@
             this.btn0.Text = "0";
             this.btn0.UseVisualStyleBackColor = true;
             this.btn0.Click += new System.EventHandler(this.btn0_Click);
-            this.btn0.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
+            this.btn0.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown);
             // 
             // btn00
             // 
@@ -255,7 +255,7 @@
             this.btn00.Text = "00";
             this.btn00.UseVisualStyleBackColor = true;
             this.btn00.Click += new System.EventHandler(this.btn0_Click);
-            this.btn00.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
+            this.btn00.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown);
             // 
             // btnKakeru
             // 
@@ -269,7 +269,7 @@
             this.btnKakeru.Text = "×";
             this.btnKakeru.UseVisualStyleBackColor = true;
             this.btnKakeru.Click += new System.EventHandler(this.btnKakeru_Click);
-            this.btnKakeru.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
+            this.btnKakeru.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown);
             // 
             // btnWaru
             // 
@@ -283,7 +283,7 @@
             this.btnWaru.Text = "÷";
             this.btnWaru.UseVisualStyleBackColor = true;
             this.btnWaru.Click += new System.EventHandler(this.btnKakeru_Click);
-            this.btnWaru.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
+            this.btnWaru.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown);
             // 
             // btnHiku
             // 
@@ -297,7 +297,7 @@
             this.btnHiku.Text = "－";
             this.btnHiku.UseVisualStyleBackColor = true;
             this.btnHiku.Click += new System.EventHandler(this.btnKakeru_Click);
-            this.btnHiku.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
+            this.btnHiku.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown);
             // 
             // btnTasu
             // 
@@ -311,7 +311,7 @@
             this.btnTasu.Text = "＋";
             this.btnTasu.UseVisualStyleBackColor = true;
             this.btnTasu.Click += new System.EventHandler(this.btnKakeru_Click);
-            this.btnTasu.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
+            this.btnTasu.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown);
             // 
             // btnEqual
             // 
@@ -325,9 +325,9 @@
             this.btnEqual.Text = "＝";
             this.btnEqual.UseVisualStyleBackColor = true;
             this.btnEqual.Click += new System.EventHandler(this.btnKakeru_Click);
-            this.btnEqual.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
+            this.btnEqual.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown);
             // 
-            // Form1
+            // Dentaku
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -352,9 +352,9 @@
             this.Controls.Add(this.btnDel);
             this.Controls.Add(this.txtKekka);
             this.Controls.Add(this.txtKeka);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
+            this.Name = "Dentaku";
+            this.Text = "Dentaku";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnEqual_PreviewKeyDow);
             this.ResumeLayout(false);
             this.PerformLayout();
 

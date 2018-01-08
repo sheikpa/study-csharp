@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace dentaku
 {
-    public partial class Form1 : Form
+    public partial class Dentaku : Form
     {
-        public Form1()
+        public Dentaku()
         {
             InitializeComponent();
         }
@@ -41,6 +41,8 @@ namespace dentaku
                 txtKekka.Text = String.Format("{0:#,0}", double.Parse(Input_str));
                 txtKeka.Text = Keka_str;
             }
+            //btnEqual.Focus();
+            //Debug.WriteLine("Debug.WriteLine");
         }
 
         private void btnKakeru_Click(object sender, EventArgs e)
@@ -128,83 +130,135 @@ namespace dentaku
             errlock = false;
         }
 
-        private void btnEqual_PreviewKeyDown_1(object sender, PreviewKeyDownEventArgs e)
+        /*
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            //Debug.WriteLine(sender.ToString());
-            //Debug.WriteLine(e.KeyCode.ToString());
             this.KeyPreview = true;
+            e.Handled = true;
+            Debug.WriteLine("Debug.WriteLine");
             switch (e.KeyCode)
             {
                 case Keys.NumPad0:
-                    this.btn0.Focus();
                     this.btn0.PerformClick();
                     break;
                 case Keys.NumPad1:
-                    this.btn1.Focus();
                     this.btn1.PerformClick();
                     break;
                 case Keys.NumPad2:
-                    this.btn2.Focus();
                     this.btn2.PerformClick();
                     break;
                 case Keys.NumPad3:
-                    this.btn3.Focus();
                     this.btn3.PerformClick();
                     break;
                 case Keys.NumPad4:
-                    this.btn4.Focus();
                     this.btn4.PerformClick();
                     break;
                 case Keys.NumPad5:
-                    this.btn5.Focus();
                     this.btn5.PerformClick();
                     break;
                 case Keys.NumPad6:
-                    this.btn6.Focus();
                     this.btn6.PerformClick();
                     break;
                 case Keys.NumPad7:
-                    this.btn7.Focus();
                     this.btn7.PerformClick();
                     break;
                 case Keys.NumPad8:
-                    this.btn8.Focus();
                     this.btn8.PerformClick();
                     break;
                 case Keys.NumPad9:
-                    this.btn9.Focus();
                     this.btn9.PerformClick();
                     break;
                 case Keys.Delete:
-                    this.btnAllCl.Focus();
                     this.btnAllCl.PerformClick();
                     break;
                 case Keys.Back:
-                    this.btnDel.Focus();
                     this.btnDel.PerformClick();
                     break;
                 case Keys.Add:
-                    this.btnTasu.Focus();
                     this.btnTasu.PerformClick();
                     break;
                 case Keys.Subtract:
-                    this.btnHiku.Focus();
                     this.btnHiku.PerformClick();
                     break;
                 case Keys.Multiply:
-                    this.btnKakeru.Focus();
                     this.btnKakeru.PerformClick();
                     break;
                 case Keys.Divide:
-                    this.btnWaru.Focus();
                     this.btnWaru.PerformClick();
                     break;
                 case Keys.Enter:
-                    this.btnEqual.Focus();
                     this.btnEqual.PerformClick();
                     break;
             }
-
         }
+        */
+
+        private void btnEqual_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            this.KeyPreview = true;
+            //e.Handled = true;
+            Debug.WriteLine("Debug.WriteLine");
+            switch (e.KeyCode)
+            {
+                case Keys.NumPad0:
+                    this.btn0.PerformClick();
+                    break;
+                case Keys.NumPad1:
+                    this.btn1.PerformClick();
+                    break;
+                case Keys.NumPad2:
+                    this.btn2.PerformClick();
+                    break;
+                case Keys.NumPad3:
+                    this.btn3.PerformClick();
+                    break;
+                case Keys.NumPad4:
+                    this.btn4.PerformClick();
+                    break;
+                case Keys.NumPad5:
+                    this.btn5.PerformClick();
+                    break;
+                case Keys.NumPad6:
+                    this.btn6.PerformClick();
+                    break;
+                case Keys.NumPad7:
+                    this.btn7.PerformClick();
+                    break;
+                case Keys.NumPad8:
+                    this.btn8.PerformClick();
+                    break;
+                case Keys.NumPad9:
+                    this.btn9.PerformClick();
+                    break;
+                case Keys.Delete:
+                    this.btnAllCl.PerformClick();
+                    break;
+                case Keys.Back:
+                    this.btnDel.PerformClick();
+                    break;
+                case Keys.Add:
+                    this.btnTasu.PerformClick();
+                    break;
+                case Keys.Subtract:
+                    this.btnHiku.PerformClick();
+                    break;
+                case Keys.Multiply:
+                    this.btnKakeru.PerformClick();
+                    break;
+                case Keys.Divide:
+                    this.btnWaru.PerformClick();
+                    break;
+                case Keys.Enter:
+                    this.btnEqual.PerformClick();
+                    break;
+            }
+        }
+        /*
+private void btn1_KeyDown(object sender, KeyEventArgs e)
+{
+   Debug.WriteLine("Debug.WriteLine");
+*/
+
+
     }
 }
