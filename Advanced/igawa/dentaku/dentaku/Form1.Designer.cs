@@ -53,7 +53,7 @@
             // txtKeka
             // 
             this.txtKeka.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtKeka.Location = new System.Drawing.Point(13, 9);
+            this.txtKeka.Location = new System.Drawing.Point(11, 9);
             this.txtKeka.Name = "txtKeka";
             this.txtKeka.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtKeka.Size = new System.Drawing.Size(307, 17);
@@ -65,21 +65,22 @@
             // 
             this.txtKekka.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtKekka.Font = new System.Drawing.Font("MS UI Gothic", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txtKekka.Font = new System.Drawing.Font("ＭＳ Ｐゴシック", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.txtKekka.Location = new System.Drawing.Point(13, 29);
             this.txtKekka.Name = "txtKekka";
-            this.txtKekka.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtKekka.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtKekka.Size = new System.Drawing.Size(307, 50);
             this.txtKekka.TabIndex = 2;
             this.txtKekka.TabStop = false;
             this.txtKekka.Text = "0";
+            this.txtKekka.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtKekka.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
             // 
             // btnDel
             // 
             this.btnDel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDel.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnDel.Location = new System.Drawing.Point(12, 86);
+            this.btnDel.Location = new System.Drawing.Point(11, 86);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(73, 54);
             this.btnDel.TabIndex = 3;
@@ -93,7 +94,7 @@
             // 
             this.btnAllCl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAllCl.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnAllCl.Location = new System.Drawing.Point(91, 86);
+            this.btnAllCl.Location = new System.Drawing.Point(90, 86);
             this.btnAllCl.Name = "btnAllCl";
             this.btnAllCl.Size = new System.Drawing.Size(152, 54);
             this.btnAllCl.TabIndex = 4;
@@ -107,231 +108,231 @@
             // 
             this.btn9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn9.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn9.Location = new System.Drawing.Point(170, 146);
+            this.btn9.Location = new System.Drawing.Point(169, 146);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(73, 54);
             this.btn9.TabIndex = 4;
             this.btn9.TabStop = false;
             this.btn9.Text = "9";
             this.btn9.UseVisualStyleBackColor = true;
-            this.btn9.Click += new System.EventHandler(this.btn0_Click);
+            this.btn9.Click += new System.EventHandler(this.btnNumClick);
             this.btn9.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
             // 
             // btn8
             // 
             this.btn8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn8.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn8.Location = new System.Drawing.Point(91, 146);
+            this.btn8.Location = new System.Drawing.Point(90, 146);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(73, 54);
             this.btn8.TabIndex = 4;
             this.btn8.TabStop = false;
             this.btn8.Text = "8";
             this.btn8.UseVisualStyleBackColor = true;
-            this.btn8.Click += new System.EventHandler(this.btn0_Click);
+            this.btn8.Click += new System.EventHandler(this.btnNumClick);
             this.btn8.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
             // 
             // btn7
             // 
             this.btn7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn7.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn7.Location = new System.Drawing.Point(12, 146);
+            this.btn7.Location = new System.Drawing.Point(11, 146);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(73, 54);
             this.btn7.TabIndex = 4;
             this.btn7.TabStop = false;
             this.btn7.Text = "7";
             this.btn7.UseVisualStyleBackColor = true;
-            this.btn7.Click += new System.EventHandler(this.btn0_Click);
+            this.btn7.Click += new System.EventHandler(this.btnNumClick);
             this.btn7.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
             // 
             // btn6
             // 
             this.btn6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn6.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn6.Location = new System.Drawing.Point(170, 206);
+            this.btn6.Location = new System.Drawing.Point(169, 206);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(73, 54);
             this.btn6.TabIndex = 4;
             this.btn6.TabStop = false;
             this.btn6.Text = "6";
             this.btn6.UseVisualStyleBackColor = true;
-            this.btn6.Click += new System.EventHandler(this.btn0_Click);
+            this.btn6.Click += new System.EventHandler(this.btnNumClick);
             this.btn6.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
             // 
             // btn5
             // 
             this.btn5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn5.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn5.Location = new System.Drawing.Point(91, 206);
+            this.btn5.Location = new System.Drawing.Point(90, 206);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(73, 54);
             this.btn5.TabIndex = 4;
             this.btn5.TabStop = false;
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = true;
-            this.btn5.Click += new System.EventHandler(this.btn0_Click);
+            this.btn5.Click += new System.EventHandler(this.btnNumClick);
             this.btn5.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
             // 
             // btn4
             // 
             this.btn4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn4.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn4.Location = new System.Drawing.Point(12, 206);
+            this.btn4.Location = new System.Drawing.Point(11, 206);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(73, 54);
             this.btn4.TabIndex = 4;
             this.btn4.TabStop = false;
             this.btn4.Text = "4";
             this.btn4.UseVisualStyleBackColor = true;
-            this.btn4.Click += new System.EventHandler(this.btn0_Click);
+            this.btn4.Click += new System.EventHandler(this.btnNumClick);
             this.btn4.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
             // 
             // btn3
             // 
             this.btn3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn3.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn3.Location = new System.Drawing.Point(170, 266);
+            this.btn3.Location = new System.Drawing.Point(169, 266);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(73, 54);
             this.btn3.TabIndex = 4;
             this.btn3.TabStop = false;
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = true;
-            this.btn3.Click += new System.EventHandler(this.btn0_Click);
+            this.btn3.Click += new System.EventHandler(this.btnNumClick);
             this.btn3.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
             // 
             // btn2
             // 
             this.btn2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn2.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn2.Location = new System.Drawing.Point(91, 266);
+            this.btn2.Location = new System.Drawing.Point(90, 266);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(73, 54);
             this.btn2.TabIndex = 4;
             this.btn2.TabStop = false;
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = true;
-            this.btn2.Click += new System.EventHandler(this.btn0_Click);
+            this.btn2.Click += new System.EventHandler(this.btnNumClick);
             this.btn2.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
             // 
             // btn1
             // 
             this.btn1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn1.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn1.Location = new System.Drawing.Point(12, 266);
+            this.btn1.Location = new System.Drawing.Point(11, 266);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(73, 54);
             this.btn1.TabIndex = 4;
             this.btn1.TabStop = false;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = true;
-            this.btn1.Click += new System.EventHandler(this.btn0_Click);
+            this.btn1.Click += new System.EventHandler(this.btnNumClick);
             this.btn1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
             // 
             // btn0
             // 
             this.btn0.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn0.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn0.Location = new System.Drawing.Point(12, 326);
+            this.btn0.Location = new System.Drawing.Point(11, 326);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(73, 54);
             this.btn0.TabIndex = 4;
             this.btn0.TabStop = false;
             this.btn0.Text = "0";
             this.btn0.UseVisualStyleBackColor = true;
-            this.btn0.Click += new System.EventHandler(this.btn0_Click);
+            this.btn0.Click += new System.EventHandler(this.btnNumClick);
             this.btn0.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
             // 
             // btn00
             // 
             this.btn00.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn00.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn00.Location = new System.Drawing.Point(91, 326);
+            this.btn00.Location = new System.Drawing.Point(90, 326);
             this.btn00.Name = "btn00";
-            this.btn00.Size = new System.Drawing.Size(73, 54);
+            this.btn00.Size = new System.Drawing.Size(152, 54);
             this.btn00.TabIndex = 4;
             this.btn00.TabStop = false;
             this.btn00.Text = "00";
             this.btn00.UseVisualStyleBackColor = true;
-            this.btn00.Click += new System.EventHandler(this.btn0_Click);
+            this.btn00.Click += new System.EventHandler(this.btnNumClick);
             this.btn00.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
             // 
             // btnKakeru
             // 
             this.btnKakeru.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnKakeru.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnKakeru.Location = new System.Drawing.Point(249, 146);
+            this.btnKakeru.Location = new System.Drawing.Point(248, 86);
             this.btnKakeru.Name = "btnKakeru";
             this.btnKakeru.Size = new System.Drawing.Size(73, 54);
             this.btnKakeru.TabIndex = 4;
             this.btnKakeru.TabStop = false;
             this.btnKakeru.Text = "×";
             this.btnKakeru.UseVisualStyleBackColor = true;
-            this.btnKakeru.Click += new System.EventHandler(this.btnKakeru_Click);
+            this.btnKakeru.Click += new System.EventHandler(this.btnOperatorClick);
             this.btnKakeru.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
             // 
             // btnWaru
             // 
             this.btnWaru.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnWaru.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnWaru.Location = new System.Drawing.Point(249, 206);
+            this.btnWaru.Location = new System.Drawing.Point(248, 146);
             this.btnWaru.Name = "btnWaru";
             this.btnWaru.Size = new System.Drawing.Size(73, 54);
             this.btnWaru.TabIndex = 4;
             this.btnWaru.TabStop = false;
             this.btnWaru.Text = "÷";
             this.btnWaru.UseVisualStyleBackColor = true;
-            this.btnWaru.Click += new System.EventHandler(this.btnKakeru_Click);
+            this.btnWaru.Click += new System.EventHandler(this.btnOperatorClick);
             this.btnWaru.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
             // 
             // btnHiku
             // 
             this.btnHiku.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnHiku.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnHiku.Location = new System.Drawing.Point(249, 266);
+            this.btnHiku.Location = new System.Drawing.Point(248, 206);
             this.btnHiku.Name = "btnHiku";
             this.btnHiku.Size = new System.Drawing.Size(73, 54);
             this.btnHiku.TabIndex = 4;
             this.btnHiku.TabStop = false;
             this.btnHiku.Text = "－";
             this.btnHiku.UseVisualStyleBackColor = true;
-            this.btnHiku.Click += new System.EventHandler(this.btnKakeru_Click);
+            this.btnHiku.Click += new System.EventHandler(this.btnOperatorClick);
             this.btnHiku.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
             // 
             // btnTasu
             // 
             this.btnTasu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnTasu.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnTasu.Location = new System.Drawing.Point(249, 326);
+            this.btnTasu.Location = new System.Drawing.Point(248, 266);
             this.btnTasu.Name = "btnTasu";
             this.btnTasu.Size = new System.Drawing.Size(73, 54);
             this.btnTasu.TabIndex = 4;
             this.btnTasu.TabStop = false;
             this.btnTasu.Text = "＋";
             this.btnTasu.UseVisualStyleBackColor = true;
-            this.btnTasu.Click += new System.EventHandler(this.btnKakeru_Click);
+            this.btnTasu.Click += new System.EventHandler(this.btnOperatorClick);
             this.btnTasu.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
             // 
             // btnEqual
             // 
             this.btnEqual.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEqual.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnEqual.Location = new System.Drawing.Point(170, 326);
+            this.btnEqual.Location = new System.Drawing.Point(248, 326);
             this.btnEqual.Name = "btnEqual";
             this.btnEqual.Size = new System.Drawing.Size(73, 54);
             this.btnEqual.TabIndex = 4;
             this.btnEqual.TabStop = false;
             this.btnEqual.Text = "＝";
             this.btnEqual.UseVisualStyleBackColor = true;
-            this.btnEqual.Click += new System.EventHandler(this.btnKakeru_Click);
+            this.btnEqual.Click += new System.EventHandler(this.btnOperatorClick);
             this.btnEqual.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 386);
+            this.ClientSize = new System.Drawing.Size(330, 386);
             this.Controls.Add(this.btnEqual);
             this.Controls.Add(this.btnTasu);
             this.Controls.Add(this.btnHiku);
@@ -353,7 +354,7 @@
             this.Controls.Add(this.txtKekka);
             this.Controls.Add(this.txtKeka);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "電卓";
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.btnEqual_PreviewKeyDown_1);
             this.ResumeLayout(false);
             this.PerformLayout();

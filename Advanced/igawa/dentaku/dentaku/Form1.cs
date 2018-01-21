@@ -22,13 +22,13 @@ namespace dentaku
         string Keka_str = "";
         double Result = 0;
         string Operator = null;
+        bool twiceEq = false;
         bool errlock = false;
 
-        
 
-        private void btn0_Click(object sender, EventArgs e)
+        private void btnNumClick(object sender, EventArgs e)
         {
-            if(Keka_str == "")
+            if (Keka_str == "")
             {
                 init();
             }
@@ -38,67 +38,96 @@ namespace dentaku
                 string text = btn.Text;
                 Input_str += text;
                 Keka_str += text;
-                txtKekka.Text = String.Format("{0:#,0}", double.Parse(Input_str));
+                txtKekka.Text = String.Format("{0:#,0}", validateDigit(Input_str));
                 txtKeka.Text = Keka_str;
             }
         }
 
-        private void btnKakeru_Click(object sender, EventArgs e)
+        private void btnOperatorClick(object sender, EventArgs e)
         {
-            if(errlock != true)
+            if (errlock != true)
             {
+                Button btn = (Button)sender;
+                if (txtKeka.Text.EndsWith("＋") ||
+                    txtKeka.Text.EndsWith("－") ||
+                    txtKeka.Text.EndsWith("×") ||
+                    txtKeka.Text.EndsWith("÷") )
+                {
+                    Keka_str = Keka_str.Remove(Keka_str.Length - 1).ToString();
+                    Operator = btn.Text;
+                    Keka_str += Operator.ToString();
+                    txtKeka.Text = Keka_str;
+                    goto end;
+                }
+
+
                 double num1 = Result;
                 if (Input_str != "")
                 {
                     double num2 = double.Parse(Input_str);
                     if (Operator == "＋")
+                    {
                         Result = num1 + num2;
+                        twiceEq = false;
+                    }
                     if (Operator == "－")
+                    {
                         Result = num1 - num2;
+                        twiceEq = false;
+                    }
                     if (Operator == "×")
+                    {
                         Result = num1 * num2;
-                    if (Operator == "÷")
+                        twiceEq = false;
+                    }
+                    if (Operator == "÷") 
                     {
                         if(num2 != 0)
                         {
                             Result = num1 / num2;
+                            twiceEq = false;
                         }
                         else
                         {
                             txtKeka.Text = "0で割ることはできません。";
-                            txtKekka.Text = "ERROR";
+                            txtKekka.Text = "0で割ることはできません。";
                             errlock = true;
-                            goto errlock;
+                            goto end;
                         }
                     }
 
                     //負の数と小数値は0に変換
                     if (Result < 0)
                         Result = 0;
-                    if ((int)Result != Result)
+                    if (Result - System.Math.Floor(Result) != 0)
                         Result = 0;
 
                     if (Operator == null)
                         Result = num2;
                 }
 
-                //txtKekka.Text = Result.ToString();
-                txtKekka.Text = String.Format("{0:#,0}", Result);
+                txtKekka.Text = Result.ToString();
+                txtKekka.Text = String.Format("{0:#,0}", validateDigit(Result.ToString()));
                 Input_str = "";
-                Button btn = (Button)sender;
                 Operator = btn.Text;
                 Keka_str += Operator.ToString();
                 txtKeka.Text = Keka_str;
 
                 if (Operator == "＝")
                 {
+                    if (twiceEq == true)
+                    {
+                        init();
+                        goto end;
+                    }
                     Operator = "";
                     Keka_str = "";
                     txtKeka.Text = "";
-                    Input_str = Result.ToString();
+                    twiceEq = true;
+                    Input_str = String.Format("{0:#,0}", validateDigit(Result.ToString()));
                 }
             }
-            errlock:;
+            end:;
         }
 
         private void btnDel_Click(object sender, EventArgs e)
@@ -106,7 +135,7 @@ namespace dentaku
             if(Input_str != "" && Keka_str != "" && errlock != true)
             {
                 Input_str = Input_str.Remove(Input_str.Length - 1).ToString();
-                txtKekka.Text = Input_str;
+                txtKekka.Text = String.Format("{0:#,0}", validateDigit(Input_str.ToString()));
                 Keka_str = Keka_str.Remove(Keka_str.Length - 1).ToString();
                 txtKeka.Text = Keka_str;
             }
@@ -125,13 +154,31 @@ namespace dentaku
             txtKekka.Text = "0";
             Result = 0;
             Operator = null;
+            twiceEq = false;
             errlock = false;
+        }
+
+        private Double validateDigit(string str)
+        {
+            if(10 < str.Length)
+            {
+                Keka_str = "11桁以上は対応していません。";
+                txtKeka.Text = Keka_str;
+                errlock = true;
+                return 999;
+            }
+            else if(str.Length == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return Double.Parse(str);
+            }
         }
 
         private void btnEqual_PreviewKeyDown_1(object sender, PreviewKeyDownEventArgs e)
         {
-            //Debug.WriteLine(sender.ToString());
-            //Debug.WriteLine(e.KeyCode.ToString());
             this.KeyPreview = true;
             switch (e.KeyCode)
             {
