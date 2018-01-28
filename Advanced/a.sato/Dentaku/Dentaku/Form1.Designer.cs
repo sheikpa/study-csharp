@@ -58,9 +58,10 @@ namespace Dentaku
             this.txtKeka.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.txtKeka.Location = new System.Drawing.Point(12, 9);
             this.txtKeka.Name = "txtKeka";
-            this.txtKeka.Size = new System.Drawing.Size(382, 19);
+            this.txtKeka.Size = new System.Drawing.Size(400, 19);
             this.txtKeka.TabIndex = 0;
             this.txtKeka.Text = "txtKeka";
+            this.txtKeka.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.txtKeka.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtKekka

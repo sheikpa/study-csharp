@@ -195,94 +195,38 @@ namespace Dentaku
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
-            String temp = "";
-            switch (beforeEnzanshi)
+            long temp = 0;
+
+            try
             {
-                case "+":
-                    if (beforeKeka != "")
-                    {
-                        temp = (int.Parse(beforeKeka) + int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
-                    }
-                    else
-                    {
-                        temp = (int.Parse(beforeNum) + int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
-                    }
+                if (beforeKeka != "")
+                {
+                    temp = enzan(long.Parse(beforeKeka), long.Parse(Convert.ToString(txtKekka.Text).Replace(",", "")), beforeEnzanshi);
+                }
+                else
+                {
+                    temp = enzan(long.Parse(beforeNum), long.Parse(Convert.ToString(txtKekka.Text).Replace(",", "")), beforeEnzanshi);
+                }
+            }
+            catch
+            {
+                temp = -1;
+            }
+
+            switch (temp)
+            {
+                case (-1):
+                    txtKekka.Text = "0";
+                    txtKeka.Text = "";
                     break;
-                case "-":
-                    if (beforeKeka != "")
-                    {
-                        temp = (int.Parse(beforeKeka) - int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
-                    }
-                    else
-                    {
-                        temp = (int.Parse(beforeNum) - int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
-                    }
-                    if (int.Parse(temp) < 0)
-                    {
-                        temp = "0";
-                    }
-                    break;
-                case "/":
-                    if (beforeKeka != "")
-                    {
-                        try
-                        {
-                            if (int.Parse(beforeKeka) % int.Parse(Convert.ToString(txtKekka.Text)) == 0)
-                            {
-                                temp = (int.Parse(beforeKeka) / int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
-                            }
-                            else
-                            {
-                                temp = "0";
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            error(erorreMsg);
-                            return;
-                        }
-                    }
-                    else
-                    {
-                        try
-                        {
-                            if (int.Parse(beforeNum) % int.Parse(Convert.ToString(txtKekka.Text).Replace(",", "")) == 0)
-                            {
-                                temp = (int.Parse(beforeNum) / int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
-                            }
-                            else
-                            {
-                                temp = "0";
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            error(erorreMsg);
-                            return;
-                        }
-                    }
-                    break;
-                case "*":
-                    if (beforeKeka != "")
-                    {
-                        temp = (int.Parse(beforeKeka) * int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
-                    }
-                    else
-                    {
-                        temp = (int.Parse(beforeNum) * int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
-                    }
+                case (-2):
+                    return;
+                default:
+                    txtKekka.Text = temp.ToString();
+                    txtKeka.Text = "";
                     break;
             }
 
-            txtKeka.Text = "";
-            if (temp == erorreMsg)
-            {
-                txtKekka.Text = temp;
-            }
-            else
-            {
-                txtKekka.Text = temp;
-            }
             beforeNum = "";
             beforeKeka = "";
             beforeEnzanshi = "";
@@ -355,127 +299,15 @@ namespace Dentaku
 
                 string numNext = "";
 
-                int j = 0;
-                int k = 0;
-
                 string numKekka = "";
                 string numKeika = "";
                 string enzanshi = "";
+                string enzanWait = "";
 
                 for (int i = 0; i < temp.Length; i++)
                 {
                     switch (temp.Substring(i, 1))
                     {
-                        case ("0"):
-                            if (numNext == "")
-                            {
-                                numKeika = "0";
-                                numNext = "1";
-                            }
-                            else
-                            {
-                                numKeika = numKeika + "0";
-                            }
-                            break;
-                        case ("1"):
-                            if (numNext == "")
-                            {
-                                numKeika = "1";
-                                numNext = "1";
-                            }
-                            else
-                            {
-                                numKeika = numKeika + "1";
-                            }
-                            break;
-                        case ("2"):
-                            if (numNext == "")
-                            {
-                                numKeika = "2";
-                                numNext = "2";
-                            }
-                            else
-                            {
-                                numKeika = numKeika + "2";
-                            }
-                            break;
-                        case ("3"):
-                            if (numNext == "")
-                            {
-                                numKeika = "3";
-                                numNext = "3";
-                            }
-                            else
-                            {
-                                numKeika = numKeika + "3";
-                            }
-                            break;
-                        case ("4"):
-                            if (numNext == "")
-                            {
-                                numKeika = "4";
-                                numNext = "4";
-                            }
-                            else
-                            {
-                                numKeika = numKeika + "4";
-                            }
-                            break;
-                        case ("5"):
-                            if (numNext == "")
-                            {
-                                numKeika = "5";
-                                numNext = "5";
-                            }
-                            else
-                            {
-                                numKeika = numKeika + "5";
-                            }
-                            break;
-                        case ("6"):
-                            if (numNext == "")
-                            {
-                                numKeika = "6";
-                                numNext = "6";
-                            }
-                            else
-                            {
-                                numKeika = numKeika + "6";
-                            }
-                            break;
-                        case ("7"):
-                            if (numNext == "")
-                            {
-                                numKeika = "7";
-                                numNext = "7";
-                            }
-                            else
-                            {
-                                numKeika = numKeika + "7";
-                            }
-                            break;
-                        case ("8"):
-                            if (numNext == "")
-                            {
-                                numKeika = "8";
-                                numNext = "8";
-                            }
-                            else
-                            {
-                                numKeika = numKeika + "8";
-                            }
-                            break;
-                        case ("9"):
-                            if (numNext == "")
-                            {
-                                numKeika = "9";
-                                numNext = "9";
-                            }
-                            else
-                            {
-                                numKeika = numKeika + "9";
-                            }
-                            break;
                         case ("+"):
                             if (numKekka == "" && enzanshi == "")
                             {
@@ -484,36 +316,11 @@ namespace Dentaku
                             }
                             else
                             {
-                                switch (enzanshi)
-                                {
-                                    case "+":
-                                        numKekka = (int.Parse(numKekka) + int.Parse(numKeika)).ToString();
-                                        break;
-                                    case "-":
-                                        numKekka = (int.Parse(numKekka) - int.Parse(numKeika)).ToString();
-                                        if (int.Parse(numKekka) < 0)
-                                        {
-                                            temp = "0";
-                                        }
-                                        break;
-                                    case "*":
-                                        numKekka = (int.Parse(numKekka) * int.Parse(numKeika)).ToString();
-                                        break;
-                                    case "/":
-                                        try
-                                        {
-                                            numKekka = (int.Parse(numKekka) / int.Parse(numKeika)).ToString();
-                                        }
-                                        catch (Exception ex)
-                                        {
-                                            error(erorreMsg);
-                                            return;
-                                        }
-                                        break;
-                                }
+                                numKekka = enzan(long.Parse(numKekka), long.Parse(numKeika), enzanshi).ToString();
                                 enzanshi = "+";
                             }
                             numNext = "";
+                            enzanWait = "1";
                             break;
                         case ("-"):
                             if (numKekka == "" && enzanshi == "")
@@ -523,36 +330,11 @@ namespace Dentaku
                             }
                             else
                             {
-                                switch (enzanshi)
-                                {
-                                    case "+":
-                                        numKekka = (int.Parse(numKekka) + int.Parse(numKeika)).ToString();
-                                        break;
-                                    case "-":
-                                        numKekka = (int.Parse(numKekka) - int.Parse(numKeika)).ToString();
-                                        if (int.Parse(numKekka) < 0)
-                                        {
-                                            temp = "0";
-                                        }
-                                        break;
-                                    case "*":
-                                        numKekka = (int.Parse(numKekka) * int.Parse(numKeika)).ToString();
-                                        break;
-                                    case "/":
-                                        try
-                                        {
-                                            numKekka = (int.Parse(numKekka) / int.Parse(numKeika)).ToString();
-                                        }
-                                        catch (Exception ex)
-                                        {
-                                            error(erorreMsg);
-                                            return;
-                                        }
-                                        break;
-                                }
+                                numKekka = enzan(long.Parse(numKekka), long.Parse(numKeika), enzanshi).ToString();
                                 enzanshi = "-";
                             }
                             numNext = "";
+                            enzanWait = "1";
                             break;
                         case ("*"):
                             if (numKekka == "" && enzanshi == "")
@@ -562,36 +344,11 @@ namespace Dentaku
                             }
                             else
                             {
-                                switch (enzanshi)
-                                {
-                                    case "+":
-                                        numKekka = (int.Parse(numKekka) + int.Parse(numKeika)).ToString();
-                                        break;
-                                    case "-":
-                                        numKekka = (int.Parse(numKekka) - int.Parse(numKeika)).ToString();
-                                        if (int.Parse(numKekka) < 0)
-                                        {
-                                            temp = "0";
-                                        }
-                                        break;
-                                    case "*":
-                                        numKekka = (int.Parse(numKekka) * int.Parse(numKeika)).ToString();
-                                        break;
-                                    case "/":
-                                        try
-                                        {
-                                            numKekka = (int.Parse(numKekka) / int.Parse(numKeika)).ToString();
-                                        }
-                                        catch (Exception ex)
-                                        {
-                                            error(erorreMsg);
-                                            return;
-                                        }
-                                        break;
-                                }
+                                numKekka = enzan(long.Parse(numKekka), long.Parse(numKeika), enzanshi).ToString();
                                 enzanshi = "*";
                             }
                             numNext = "";
+                            enzanWait = "1";
                             break;
                         case ("/"):
                             if (numKekka == "" && enzanshi == "")
@@ -601,68 +358,79 @@ namespace Dentaku
                             }
                             else
                             {
-                                switch (enzanshi)
-                                {
-                                    case "+":
-                                        numKekka = (int.Parse(numKekka) + int.Parse(numKeika)).ToString();
-                                        break;
-                                    case "-":
-                                        numKekka = (int.Parse(numKekka) - int.Parse(numKeika)).ToString();
-                                        if (int.Parse(numKekka) < 0)
-                                        {
-                                            temp = "0";
-                                        }
-                                        break;
-                                    case "*":
-                                        numKekka = (int.Parse(numKekka) * int.Parse(numKeika)).ToString();
-                                        break;
-                                    case "/":
-                                        try {
-                                            numKekka = (int.Parse(numKekka) / int.Parse(numKeika)).ToString();
-                                        }
-                                        catch (Exception ex)
-                                        {
-                                            error(erorreMsg);
-                                            return;
-                                        }
-                                        break;
-                                }
+                                numKekka = enzan(long.Parse(numKekka), long.Parse(numKeika), enzanshi).ToString();
                                 enzanshi = "/";
                             }
                             numNext = "";
+                            enzanWait = "1";
+                            break;
+                        default:
+                            if (numNext == "")
+                            {
+                                numKeika = temp.Substring(i, 1);
+                                numNext = "1";
+                            }
+                            else
+                            {
+                                numKeika = numKeika + temp.Substring(i, 1);
+                            }
+                            enzanWait = "";
                             break;
                     }
+
+                    if (numKekka != "")
+                    {
+                        if (long.Parse(numKekka) == -2)
+                        {
+                            break;
+                        }
+                        if (long.Parse(numKekka) == -1)
+                        {
+                            numKekka = "0";
+                        }
+                    }
+
                 }
 
-                switch (enzanshi)
+                if (numKekka != "")
                 {
-                    case "+":
-                        numKekka = (int.Parse(numKekka) + int.Parse(numKeika)).ToString();
-                        break;
-                    case "-":
-                        numKekka = (int.Parse(numKekka) - int.Parse(numKeika)).ToString();
-                        if (int.Parse(numKekka) < 0)
-                        {
-                            temp = "0";
-                        }
-                        break;
-                    case "*":
-                        numKekka = (int.Parse(numKekka) * int.Parse(numKeika)).ToString();
-                        break;
-                    case "/":
+                    if (long.Parse(numKekka) >= 0)
+                    {
                         try
                         {
-                            numKekka = (int.Parse(numKekka) / int.Parse(numKeika)).ToString();
+                            if (enzanshi != "" && enzanWait == "")
+                            {
+                                numKekka = enzan(long.Parse(numKekka), long.Parse(numKeika), enzanshi).ToString();
+                            }
+                            else
+                            {
+                                numKekka = "";
+                            }
                         }
-                        catch (Exception ex)
+                        catch
                         {
-                            error(erorreMsg);
-                            return;
+                            numKekka = "";
                         }
-                        break;
+                    }
+
+                    switch (long.Parse(numKekka))
+                    {
+                        case (-1):
+                            txtKekka.Text = "0";
+                            break;
+                        case (-2):
+                            return;
+                        default:
+                            txtKekka.Text = numKekka;
+                            break;
+                    }
+
+                }
+                else
+                {
+                    txtKekka.Text = numKekka;
                 }
 
-                txtKekka.Text = numKekka;
                 equaleFlg = "1";
             }
         }
@@ -678,41 +446,20 @@ namespace Dentaku
 
                 if (beforeNum != "")
                 {
-                    switch (beforeEnzanshi)
+                    beforeNum = enzan(long.Parse(beforeNum), long.Parse(txtKekka.Text), beforeEnzanshi).ToString();
+
+                    switch (long.Parse(beforeNum))
                     {
-                        case ("+"):
-                            beforeNum = (int.Parse(beforeNum) + int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
+                        case (-1):
+                            txtKekka.Text = "0";
+                            beforeNum = "0";
                             break;
-                        case ("-"):
-                            beforeNum = (int.Parse(beforeNum) - int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
-                            if (int.Parse(beforeNum) < 0)
-                            {
-                                beforeNum = "0";
-                            }
-                            break;
-                        case ("*"):
-                            beforeNum = (int.Parse(beforeNum) * int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
-                            break;
-                        case ("/"):
-                            try
-                            {
-                                if (int.Parse(beforeNum) % int.Parse(Convert.ToString(txtKekka.Text).Replace(",", "")) == 0)
-                                {
-                                    beforeNum = (int.Parse(beforeNum) / int.Parse(Convert.ToString(txtKekka.Text).Replace(",", ""))).ToString();
-                                }
-                                else
-                                {
-                                    beforeNum = "0";
-                                }
-                            }
-                            catch (Exception ex)
-                            {
-                                error(erorreMsg);
-                                return;
-                            }
+                        case (-2):
+                            return;
+                        default:
+                            txtKekka.Text = beforeNum;
                             break;
                     }
-                    txtKekka.Text = beforeNum;
                 }
                 else
                 {
@@ -867,6 +614,48 @@ namespace Dentaku
                 txtKekka.Text = "";
                 equaleFlg = "";
             }
+        }
+
+        public long enzan(long beforeSuuji, long suuji, string enzanshi)
+        {
+            long result = 0;
+
+            switch (enzanshi)
+            {
+                case "+":
+                    result = beforeSuuji + suuji;
+                    break;
+                case "-":
+                    result = beforeSuuji - suuji;
+                    if (result < 0)
+                    {
+                        result = -1;
+                    }
+                    break;
+                case "/":
+                    try
+                    {
+                        if (beforeSuuji % suuji == 0)
+                        {
+                            result = beforeSuuji / suuji;
+                        }
+                        else
+                        {
+                            result = -1;
+                        }
+                    }
+                    catch
+                    {
+                        error(erorreMsg);
+                        result = -2;
+                    }
+                    break;
+                case "*":
+                    result = beforeSuuji * suuji;
+                    break;
+            }
+
+            return result;
         }
 
         private void error(string message)
