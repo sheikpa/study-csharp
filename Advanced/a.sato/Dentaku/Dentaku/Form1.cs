@@ -17,7 +17,7 @@ namespace Dentaku
         internal string beforeEnzanshi = "";
         internal string enzanFlg = "";
         internal string equaleFlg = "";
-        internal string erorreMsg = "0で除算することはできません";
+        internal string erorreMsg = "0で割ることはできません。";
 
         public Form1()
         {
