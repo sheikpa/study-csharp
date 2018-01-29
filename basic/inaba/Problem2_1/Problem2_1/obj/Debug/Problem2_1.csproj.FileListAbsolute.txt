@@ -1,0 +1,11 @@
+D:\study-csharp\Problem2_1\Problem2_1\bin\Debug\Problem2_1.exe.config
+D:\study-csharp\Problem2_1\Problem2_1\bin\Debug\Problem2_1.exe
+D:\study-csharp\Problem2_1\Problem2_1\bin\Debug\Problem2_1.pdb
+D:\study-csharp\Problem2_1\Problem2_1\obj\Debug\Problem2_1.csproj.CoreCompileInputs.cache
+D:\study-csharp\Problem2_1\Problem2_1\obj\Debug\Problem2_1.exe
+D:\study-csharp\Problem2_1\Problem2_1\obj\Debug\Problem2_1.pdb
+C:\work\Csharp_benkyou_kiso\Problem2_1\Problem2_1\bin\Debug\Problem2_1.exe
+C:\work\Csharp_benkyou_kiso\Problem2_1\Problem2_1\bin\Debug\Problem2_1.pdb
+C:\work\Csharp_benkyou_kiso\Problem2_1\Problem2_1\obj\Debug\Problem2_1.csproj.CoreCompileInputs.cache
+C:\work\Csharp_benkyou_kiso\Problem2_1\Problem2_1\obj\Debug\Problem2_1.exe
+C:\work\Csharp_benkyou_kiso\Problem2_1\Problem2_1\obj\Debug\Problem2_1.pdb
