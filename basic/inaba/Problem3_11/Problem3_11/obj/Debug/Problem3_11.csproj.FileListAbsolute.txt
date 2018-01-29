@@ -1,0 +1,7 @@
+D:\study-csharp\Problem3_11\Problem3_11\bin\Debug\Problem3_11.exe.config
+D:\study-csharp\Problem3_11\Problem3_11\bin\Debug\Problem3_11.exe
+D:\study-csharp\Problem3_11\Problem3_11\bin\Debug\Problem3_11.pdb
+D:\study-csharp\Problem3_11\Problem3_11\obj\Debug\Problem3_11.csprojResolveAssemblyReference.cache
+D:\study-csharp\Problem3_11\Problem3_11\obj\Debug\Problem3_11.csproj.CoreCompileInputs.cache
+D:\study-csharp\Problem3_11\Problem3_11\obj\Debug\Problem3_11.exe
+D:\study-csharp\Problem3_11\Problem3_11\obj\Debug\Problem3_11.pdb
