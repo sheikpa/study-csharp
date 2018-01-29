@@ -1,0 +1,12 @@
+c:\users\e5420user\source\repos\Problem3_2\Problem3_2\bin\Debug\Problem3_2.exe.config
+c:\users\e5420user\source\repos\Problem3_2\Problem3_2\bin\Debug\Problem3_2.exe
+c:\users\e5420user\source\repos\Problem3_2\Problem3_2\bin\Debug\Problem3_2.pdb
+c:\users\e5420user\source\repos\Problem3_2\Problem3_2\obj\Debug\Problem3_2.csproj.CoreCompileInputs.cache
+c:\users\e5420user\source\repos\Problem3_2\Problem3_2\obj\Debug\Problem3_2.exe
+c:\users\e5420user\source\repos\Problem3_2\Problem3_2\obj\Debug\Problem3_2.pdb
+C:\work\Csharp_benkyou_kiso\Problem3_2\Problem3_2\bin\Debug\Problem3_2.exe
+C:\work\Csharp_benkyou_kiso\Problem3_2\Problem3_2\bin\Debug\Problem3_2.pdb
+C:\work\Csharp_benkyou_kiso\Problem3_2\Problem3_2\obj\Debug\Problem3_2.csprojResolveAssemblyReference.cache
+C:\work\Csharp_benkyou_kiso\Problem3_2\Problem3_2\obj\Debug\Problem3_2.csproj.CoreCompileInputs.cache
+C:\work\Csharp_benkyou_kiso\Problem3_2\Problem3_2\obj\Debug\Problem3_2.exe
+C:\work\Csharp_benkyou_kiso\Problem3_2\Problem3_2\obj\Debug\Problem3_2.pdb
