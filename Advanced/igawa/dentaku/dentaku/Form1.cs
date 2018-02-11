@@ -48,12 +48,20 @@ namespace dentaku
             if (errlock != true)
             {
                 Button btn = (Button)sender;
+                if (twiceEq == true)
+                {
+                    Keka_str += Input_str;
+                    txtKeka.Text = Keka_str;
+                }
                 if (txtKeka.Text.EndsWith("＋") ||
                     txtKeka.Text.EndsWith("－") ||
                     txtKeka.Text.EndsWith("×") ||
                     txtKeka.Text.EndsWith("÷") )
                 {
-                    Keka_str = Keka_str.Remove(Keka_str.Length - 1).ToString();
+                    if(Keka_str.Length != 0)
+                    {
+                        Keka_str = Keka_str.Remove(Keka_str.Length - 1).ToString();
+                    }
                     Operator = btn.Text;
                     Keka_str += Operator.ToString();
                     txtKeka.Text = Keka_str;
