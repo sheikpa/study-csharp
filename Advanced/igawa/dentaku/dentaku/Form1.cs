@@ -41,6 +41,7 @@ namespace dentaku
                 txtKekka.Text = String.Format("{0:#,0}", validateDigit(Input_str));
                 txtKeka.Text = Keka_str;
             }
+            twiceEq = false;
         }
 
         private void btnOperatorClick(object sender, EventArgs e)
@@ -114,7 +115,7 @@ namespace dentaku
                         Result = num2;
                 }
 
-                txtKekka.Text = Result.ToString();
+                //txtKekka.Text = Result.ToString();
                 txtKekka.Text = String.Format("{0:#,0}", validateDigit(Result.ToString()));
                 Input_str = "";
                 Operator = btn.Text;
