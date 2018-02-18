@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.nenryouText = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.start = new System.Windows.Forms.Button();
             this.stop = new System.Windows.Forms.Button();
@@ -40,12 +41,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.kyori2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.kyori3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -61,15 +63,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "燃料";
             // 
-            // textBox1
+            // nenryouText
             // 
-            this.textBox1.Font = new System.Drawing.Font("ＭＳ ゴシック", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox1.Location = new System.Drawing.Point(58, 13);
-            this.textBox1.MaxLength = 3;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(50, 39);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.WordWrap = false;
+            this.nenryouText.Font = new System.Drawing.Font("ＭＳ ゴシック", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.nenryouText.Location = new System.Drawing.Point(58, 13);
+            this.nenryouText.MaxLength = 3;
+            this.nenryouText.Name = "nenryouText";
+            this.nenryouText.Size = new System.Drawing.Size(50, 39);
+            this.nenryouText.TabIndex = 1;
+            this.nenryouText.WordWrap = false;
             // 
             // label2
             // 
@@ -90,6 +92,7 @@
             this.start.TabIndex = 2;
             this.start.Text = "START!";
             this.start.UseVisualStyleBackColor = true;
+            this.start.Click += new System.EventHandler(this.start_Click);
             // 
             // stop
             // 
@@ -100,6 +103,7 @@
             this.stop.TabIndex = 2;
             this.stop.Text = "STOP!";
             this.stop.UseVisualStyleBackColor = true;
+            this.stop.Click += new System.EventHandler(this.stop_Click);
             // 
             // label3
             // 
@@ -153,7 +157,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(118, 46);
             this.label5.TabIndex = 3;
-            this.label5.Text = "車名１\r\nリッター30㎞";
+            this.label5.Text = "車名２\r\nリッター20㎞";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBox2
@@ -168,16 +172,16 @@
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
-            // label6
+            // kyori2
             // 
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label6.Location = new System.Drawing.Point(302, 189);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(132, 46);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "走行距離：\r\n";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.kyori2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.kyori2.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.kyori2.Location = new System.Drawing.Point(302, 189);
+            this.kyori2.Name = "kyori2";
+            this.kyori2.Size = new System.Drawing.Size(132, 46);
+            this.kyori2.TabIndex = 5;
+            this.kyori2.Text = "走行距離：\r\n";
+            this.kyori2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
@@ -196,7 +200,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(118, 46);
             this.label8.TabIndex = 3;
-            this.label8.Text = "車名１\r\nリッター30㎞";
+            this.label8.Text = "車名３\r\nリッター15㎞";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBox3
@@ -211,16 +215,16 @@
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
             // 
-            // label9
+            // kyori3
             // 
-            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label9.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label9.Location = new System.Drawing.Point(302, 292);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(132, 46);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "走行距離：\r\n";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.kyori3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.kyori3.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.kyori3.Location = new System.Drawing.Point(302, 292);
+            this.kyori3.Name = "kyori3";
+            this.kyori3.Size = new System.Drawing.Size(132, 46);
+            this.kyori3.TabIndex = 5;
+            this.kyori3.Text = "走行距離：\r\n";
+            this.kyori3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label10
             // 
@@ -229,6 +233,10 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(147, 2);
             this.label10.TabIndex = 6;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -239,8 +247,8 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.kyori3);
+            this.Controls.Add(this.kyori2);
             this.Controls.Add(this.kyori1);
             this.Controls.Add(this.start);
             this.Controls.Add(this.pictureBox3);
@@ -250,7 +258,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.stop);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.nenryouText);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
@@ -267,7 +275,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox nenryouText;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button start;
         private System.Windows.Forms.Button stop;
@@ -277,12 +285,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label kyori2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label kyori3;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
