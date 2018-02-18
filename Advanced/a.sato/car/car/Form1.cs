@@ -141,7 +141,6 @@ namespace car
                 nenryouText.ReadOnly = false;
                 return "0";
             }
-
             return "1";
         }
     }
