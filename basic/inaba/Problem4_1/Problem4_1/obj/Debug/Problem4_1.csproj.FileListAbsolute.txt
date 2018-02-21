@@ -1,0 +1,5 @@
+c:\users\pc55\documents\visual studio 2015\Projects\Problem4_1\Problem4_1\bin\Debug\Problem4_1.exe.config
+C:\Users\PC55\Desktop\Problem4_1\Problem4_1\bin\Debug\Problem4_1.exe.config
+C:\Users\PC55\Desktop\Problem4_1\Problem4_1\obj\Debug\Problem4_1.csprojResolveAssemblyReference.cache
+C:\Users\PC55\Desktop\Problem4_1\Problem4_1\obj\Debug\Problem4_1.Properties.Resources.resources
+C:\Users\PC55\Desktop\Problem4_1\Problem4_1\obj\Debug\Problem4_1.csproj.GenerateResource.Cache
