@@ -1,2 +1,0 @@
-Problem6_1.exe
-pause
