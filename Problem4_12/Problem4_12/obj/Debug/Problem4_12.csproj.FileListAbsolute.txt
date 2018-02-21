@@ -1,6 +1,0 @@
-c:\users\pc55\documents\visual studio 2015\Projects\Problem4_12\Problem4_12\bin\Debug\Problem4_12.exe.config
-c:\users\pc55\documents\visual studio 2015\Projects\Problem4_12\Problem4_12\bin\Debug\Problem4_12.exe
-c:\users\pc55\documents\visual studio 2015\Projects\Problem4_12\Problem4_12\bin\Debug\Problem4_12.pdb
-c:\users\pc55\documents\visual studio 2015\Projects\Problem4_12\Problem4_12\obj\Debug\Problem4_12.csprojResolveAssemblyReference.cache
-c:\users\pc55\documents\visual studio 2015\Projects\Problem4_12\Problem4_12\obj\Debug\Problem4_12.exe
-c:\users\pc55\documents\visual studio 2015\Projects\Problem4_12\Problem4_12\obj\Debug\Problem4_12.pdb
