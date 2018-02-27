@@ -1,0 +1,15 @@
+C:\Users\PC55\Desktop\inaba\Problem8_10\bin\Debug\Problem8_10.exe.config
+C:\Users\PC55\Desktop\inaba\Problem8_10\bin\Debug\Problem8_10.exe
+C:\Users\PC55\Desktop\inaba\Problem8_10\bin\Debug\Problem8_10.pdb
+C:\Users\PC55\Desktop\inaba\Problem8_10\obj\Debug\Problem8_10.exe
+C:\Users\PC55\Desktop\inaba\Problem8_10\obj\Debug\Problem8_10.pdb
+C:\Users\PC55\Desktop\8-1-18\Problem8_10\bin\Debug\Problem8_10.exe.config
+C:\Users\PC55\Desktop\8-1-18\Problem8_10\bin\Debug\Problem8_10.exe
+C:\Users\PC55\Desktop\8-1-18\Problem8_10\bin\Debug\Problem8_10.pdb
+C:\Users\PC55\Desktop\8-1-18\Problem8_10\obj\Debug\Problem8_10.exe
+C:\Users\PC55\Desktop\8-1-18\Problem8_10\obj\Debug\Problem8_10.pdb
+C:\Users\PC55\Desktop\C#勉強\8-1-18\Problem8_10\bin\Debug\Problem8_10.exe.config
+C:\Users\PC55\Desktop\C#勉強\8-1-18\Problem8_10\bin\Debug\Problem8_10.exe
+C:\Users\PC55\Desktop\C#勉強\8-1-18\Problem8_10\bin\Debug\Problem8_10.pdb
+C:\Users\PC55\Desktop\C#勉強\8-1-18\Problem8_10\obj\Debug\Problem8_10.exe
+C:\Users\PC55\Desktop\C#勉強\8-1-18\Problem8_10\obj\Debug\Problem8_10.pdb
