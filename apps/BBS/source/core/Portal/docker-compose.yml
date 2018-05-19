@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  portal:
+    image: portal
+    build:
+      context: ./Portal
+      dockerfile: Dockerfile
