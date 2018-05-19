@@ -12542,11 +12542,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\core\\Portal\\Portal\\Portal.csproj",
+      "projectUniqueName": "D:\\git\\study-csharp\\apps\\BBS\\source\\core\\Portal\\Portal\\Portal.csproj",
       "projectName": "Portal",
-      "projectPath": "D:\\core\\Portal\\Portal\\Portal.csproj",
+      "projectPath": "D:\\git\\study-csharp\\apps\\BBS\\source\\core\\Portal\\Portal\\Portal.csproj",
       "packagesPath": "C:\\Users\\E5420user\\.nuget\\packages\\",
-      "outputPath": "D:\\core\\Portal\\Portal\\obj\\",
+      "outputPath": "D:\\git\\study-csharp\\apps\\BBS\\source\\core\\Portal\\Portal\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
